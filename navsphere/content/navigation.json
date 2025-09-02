@@ -120,7 +120,16 @@
       "id": "9",
       "title": "AI工具包",
       "icon": "Brain",
-      "items": [],
+      "items": [
+        {
+          "id": "site_1756802975057_2lwibc3gx",
+          "title": "Qwen Chat",
+          "href": "https://chat.qwen.ai/",
+          "description": "",
+          "icon": "/assets/favicon_1756802960144.png",
+          "enabled": true
+        }
+      ],
       "subCategories": [
         {
           "id": "cbb3e33d-408b-41ba-9e9a-e0444303e3fd",
