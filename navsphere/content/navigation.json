@@ -788,6 +788,14 @@
           "description": "专注分享次元世界-Galgame",
           "icon": "/assets/favicon_1756796857675.png",
           "enabled": true
+        },
+        {
+          "id": "site_1756796940816_recnyxia3",
+          "title": "青桔网",
+          "href": "https://spare.qingju.org/",
+          "description": "由青桔移植组建立的非盈利型galgame免费分享平台",
+          "icon": "/assets/favicon_1756796923154.png",
+          "enabled": true
         }
       ],
       "subCategories": []
