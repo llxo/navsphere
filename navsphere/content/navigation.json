@@ -136,14 +136,6 @@
           "description": "访问 aistudio.google.com",
           "icon": "/assets/favicon_1756802979779.png",
           "enabled": true
-        },
-        {
-          "id": "site_1756803098241_qldihd9la",
-          "title": "DeepSeek",
-          "href": "https://chat.deepseek.com/",
-          "description": "Chat with DeepSeek AI – your intelligent assistant for coding, content creation, file reading, and more. Upload documents, engage in long-context conversations, and get expert help in AI, natural language processing, and beyond. | 深度求索（DeepSeek）助力编程代码开发、创意写作、文件处理等任务，支持文件上传及长文本对话，随时为您提供高效的AI支持。",
-          "icon": "/assets/favicon_1756803084242.svg",
-          "enabled": true
         }
       ],
       "subCategories": [
@@ -176,6 +168,14 @@
               "href": "https://gemini.google.com/u/1/app",
               "description": "Google开发的生成式人工智能聊天机器人。它基于同名的Gemini系列大型语言模型。",
               "icon": "/assets/images/logos/gemini.svg",
+              "enabled": true
+            },
+            {
+              "id": "site_1756803098241_qldihd9la",
+              "title": "DeepSeek",
+              "href": "https://chat.deepseek.com/",
+              "description": "Chat with DeepSeek AI – your intelligent assistant for coding, content creation, file reading, and more. Upload documents, engage in long-context conversations, and get expert help in AI, natural language processing, and beyond. | 深度求索（DeepSeek）助力编程代码开发、创意写作、文件处理等任务，支持文件上传及长文本对话，随时为您提供高效的AI支持。",
+              "icon": "/assets/favicon_1756803084242.svg",
               "enabled": true
             }
           ]
