@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
+import { convertIconPathToOnline } from '@/lib/icon-utils'
 
 export const runtime = 'edge'
 
@@ -33,7 +34,8 @@ export async function POST(request: Request) {
         if (metadata.icon) {
             try {
                 const iconUrl = await downloadAndUploadIcon(metadata.icon, session.user.accessToken)
-                metadata.icon = iconUrl
+                // 将本地路径转换为在线URL
+                metadata.icon = convertIconPathToOnline(iconUrl)
                
             } catch (error) {
                 console.warn('Failed to download icon:', error)
@@ -41,7 +43,8 @@ export async function POST(request: Request) {
                 try {
                     const domain = new URL(url).hostname
                     const fallbackIconUrl = await downloadGoogleFavicon(domain, session.user.accessToken)
-                    metadata.icon = fallbackIconUrl
+                    // 将本地路径转换为在线URL
+                    metadata.icon = convertIconPathToOnline(fallbackIconUrl)
                 } catch (fallbackError) {
                     console.warn('Failed to download Google favicon:', fallbackError)
                     // 保持原始 URL

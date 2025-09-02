@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { commitFile, getFileContent } from '@/lib/github'
+import { convertIconPathToOnline } from '@/lib/icon-utils'
 import type { ResourceMetadata } from '@/types/resource-metadata'
 
 export const runtime = 'edge'
@@ -32,14 +33,17 @@ export async function POST(request: Request) {
         const binaryData = Uint8Array.from(atob(base64Data), c => c.charCodeAt(0)); // Convert Base64 to binary
 
         // 获取上传结果，包含路径和 commit hash
-        const { path: imageUrl, commitHash } = await uploadImageToGitHub(binaryData, session.user.accessToken);
+        const { path: imagePath, commitHash } = await uploadImageToGitHub(binaryData, session.user.accessToken);
+        
+        // 将本地路径转换为在线URL
+        const imageUrl = convertIconPathToOnline(imagePath);
 
         // Handle metadata
         const metadata = await getFileContent('navsphere/content/resource-metadata.json') as ResourceMetadata;
         metadata.metadata.unshift({ 
             commit: commitHash,  // 使用实际的 commit hash
             hash: commitHash,    // 使用相同的 hash 作为资源标识
-            path: imageUrl 
+            path: imagePath      // 在元数据中保存本地路径
         });
 
         await commitFile(
