@@ -796,6 +796,14 @@
           "description": "由青桔移植组建立的非盈利型galgame免费分享平台",
           "icon": "/assets/favicon_1756796923154.png",
           "enabled": true
+        },
+        {
+          "id": "site_1756796972348_qixtvxhnn",
+          "title": "梓澪の妙妙屋",
+          "href": "https://zi0.cc/",
+          "description": "免费Galgame仓库&下载站",
+          "icon": "/assets/favicon_1756796946439.png",
+          "enabled": true
         }
       ],
       "subCategories": []
