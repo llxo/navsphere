@@ -1,11 +1,16 @@
 import { NextResponse } from 'next/server'
-import navigationData from '@/navsphere/content/navigation.json'
+import { getFileContent } from '@/lib/github'
+import { convertNavigationIconsToOnline } from '@/lib/icon-utils'
 
 export const runtime = 'edge'
 
 export async function GET() {
   try {
-    return NextResponse.json(navigationData, {
+    const navigationData = await getFileContent('navsphere/content/navigation.json')
+    // 转换本地icon路径为在线路径
+    const convertedData = convertNavigationIconsToOnline(navigationData)
+    
+    return NextResponse.json(convertedData, {
       headers: {
         'Cache-Control': 's-maxage=3600, stale-while-revalidate',
         'Content-Type': 'application/json'

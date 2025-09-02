@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { commitFile, getFileContent } from '@/lib/github'
+import { convertNavigationIconsToOnline } from '@/lib/icon-utils'
 import type { NavigationData, NavigationItem } from '@/types/navigation'
 
 export const runtime = 'edge'
@@ -8,7 +9,9 @@ export const runtime = 'edge'
 export async function GET() {
   try {
     const data = await getFileContent('navsphere/content/navigation.json')
-    return NextResponse.json(data)
+    // 转换本地icon路径为在线路径
+    const convertedData = convertNavigationIconsToOnline(data)
+    return NextResponse.json(convertedData)
   } catch (error) {
     console.error('Failed to fetch navigation data:', error)
     // 返回默认数据结构
