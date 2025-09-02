@@ -122,14 +122,6 @@
       "icon": "Brain",
       "items": [
         {
-          "id": "site_1756802975057_2lwibc3gx",
-          "title": "Qwen Chat",
-          "href": "https://chat.qwen.ai/",
-          "description": "",
-          "icon": "/assets/favicon_1756802960144.png",
-          "enabled": true
-        },
-        {
           "id": "site_1756802999188_w22zd6xjw",
           "title": "Aistudio",
           "href": "https://aistudio.google.com/u/1/prompts/new_chat?pli=1",
@@ -176,6 +168,14 @@
               "href": "https://chat.deepseek.com/",
               "description": "Chat with DeepSeek AI – your intelligent assistant for coding, content creation, file reading, and more. Upload documents, engage in long-context conversations, and get expert help in AI, natural language processing, and beyond. | 深度求索（DeepSeek）助力编程代码开发、创意写作、文件处理等任务，支持文件上传及长文本对话，随时为您提供高效的AI支持。",
               "icon": "/assets/favicon_1756803084242.svg",
+              "enabled": true
+            },
+            {
+              "id": "site_1756802975057_2lwibc3gx",
+              "title": "Qwen Chat",
+              "href": "https://chat.qwen.ai/",
+              "description": "",
+              "icon": "/assets/favicon_1756802960144.png",
               "enabled": true
             }
           ]
