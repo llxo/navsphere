@@ -3,42 +3,74 @@ import { Metadata } from 'next/types'
 import { ScrollToTop } from '@/components/ScrollToTop'
 import { Container } from '@/components/ui/container'
 import type { SiteConfig } from '@/types/site'
-import navigationData from '@/navsphere/content/navigation.json'
-import siteDataRaw from '@/navsphere/content/site.json'
+import { getFileContent } from '@/lib/github'
 
-function getData() {
-  // 确保 theme 类型正确
-  const siteData: SiteConfig = {
-    ...siteDataRaw,
-    appearance: {
-      ...siteDataRaw.appearance,
-      theme: (siteDataRaw.appearance.theme === 'light' ||
-        siteDataRaw.appearance.theme === 'dark' ||
-        siteDataRaw.appearance.theme === 'system')
-        ? siteDataRaw.appearance.theme
-        : 'system'
-    }
-  }
+export const runtime = 'edge'
 
-  return {
-    navigationData: navigationData || { navigationItems: [] },
-    siteData: siteData || {
+async function getData() {
+  try {
+    // 从GitHub仓库动态获取最新数据
+    const [navigationData, siteDataRaw] = await Promise.all([
+      getFileContent('navsphere/content/navigation.json'),
+      getFileContent('navsphere/content/site.json')
+    ])
+
+    // 确保 theme 类型正确
+    const siteData: SiteConfig = {
       basic: {
-        title: 'NavSphere',
-        description: '',
-        keywords: ''
+        title: siteDataRaw?.basic?.title || 'NavSphere',
+        description: siteDataRaw?.basic?.description || '',
+        keywords: siteDataRaw?.basic?.keywords || ''
       },
       appearance: {
-        logo: '',
-        favicon: '',
-        theme: 'system' as const
+        logo: siteDataRaw?.appearance?.logo || '',
+        favicon: siteDataRaw?.appearance?.favicon || '',
+        theme: (siteDataRaw?.appearance?.theme === 'light' ||
+          siteDataRaw?.appearance?.theme === 'dark' ||
+          siteDataRaw?.appearance?.theme === 'system')
+          ? siteDataRaw.appearance.theme
+          : 'system'
+      }
+    }
+
+    return {
+      navigationData: navigationData || { navigationItems: [] },
+      siteData: siteData || {
+        basic: {
+          title: 'NavSphere',
+          description: '',
+          keywords: ''
+        },
+        appearance: {
+          logo: '',
+          favicon: '',
+          theme: 'system' as const
+        }
+      }
+    }
+  } catch (error) {
+    console.error('Error fetching data:', error)
+    // 返回默认数据
+    return {
+      navigationData: { navigationItems: [] },
+      siteData: {
+        basic: {
+          title: 'NavSphere',
+          description: '',
+          keywords: ''
+        },
+        appearance: {
+          logo: '',
+          favicon: '',
+          theme: 'system' as const
+        }
       }
     }
   }
 }
 
-export function generateMetadata(): Metadata {
-  const { siteData } = getData()
+export async function generateMetadata(): Promise<Metadata> {
+  const { siteData } = await getData()
 
   return {
     title: siteData.basic.title,
@@ -50,8 +82,8 @@ export function generateMetadata(): Metadata {
   }
 }
 
-export default function HomePage() {
-  const { navigationData, siteData } = getData()
+export default async function HomePage() {
+  const { navigationData, siteData } = await getData()
 
   return (
     <Container>
