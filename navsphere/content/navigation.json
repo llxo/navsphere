@@ -780,6 +780,14 @@
           "description": "这里是真红小站（失落小站）, 一个galgame资源站, (包括visual novel, 黄油, psp, krkr, ons gal资源 等), 收录了大部分的汉化galgame, 大部分的生肉galgame资源。",
           "icon": "/assets/favicon_1756796840322.ico",
           "enabled": true
+        },
+        {
+          "id": "site_1756796869403_do2otk61d",
+          "title": "绮梦ACG - 免费galgame资源下载",
+          "href": "https://game.acgs.one/",
+          "description": "专注分享次元世界-Galgame",
+          "icon": "/assets/favicon_1756796857675.png",
+          "enabled": true
         }
       ],
       "subCategories": []
