@@ -764,7 +764,16 @@
       "icon": "Box",
       "description": "",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "site_1756796833879_iccc1z03s",
+          "title": "维咔VikACG",
+          "href": "https://www.vikacg.com/post",
+          "description": "维咔VikACG由VikACG Pte. Ltd.运营，致力于各类动漫资源分享以及漫友交流，我们的Slogan是：肥宅们的欢乐家园。",
+          "icon": "/assets/favicon_1756796813517.ico",
+          "enabled": true
+        }
+      ],
       "subCategories": []
     }
   ]
