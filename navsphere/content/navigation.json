@@ -20,6 +20,14 @@
           "description": "访问 linux.do",
           "icon": "/assets/favicon_1756800131919.png",
           "enabled": true
+        },
+        {
+          "id": "site_1756801017427_yexn82ep2",
+          "title": "取文件",
+          "href": "https://quwenjian.cc/#/send",
+          "description": "开箱即用的文件快传系统",
+          "icon": "/assets/favicon_1756801000571.png",
+          "enabled": true
         }
       ],
       "subCategories": [],
