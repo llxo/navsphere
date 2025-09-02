@@ -128,6 +128,14 @@
           "description": "",
           "icon": "/assets/favicon_1756802960144.png",
           "enabled": true
+        },
+        {
+          "id": "site_1756802999188_w22zd6xjw",
+          "title": "Aistudio",
+          "href": "https://aistudio.google.com/u/1/prompts/new_chat?pli=1",
+          "description": "访问 aistudio.google.com",
+          "icon": "/assets/favicon_1756802979779.png",
+          "enabled": true
         }
       ],
       "subCategories": [
