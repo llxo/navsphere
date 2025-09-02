@@ -804,6 +804,14 @@
           "description": "免费Galgame仓库&下载站",
           "icon": "/assets/favicon_1756796946439.png",
           "enabled": true
+        },
+        {
+          "id": "site_1756796994257_xmv02ajvv",
+          "title": "量子ACG",
+          "href": "https://lzacg.cc/",
+          "description": "量子ACG是一个以游戏为主，进而推动日语学习的网站",
+          "icon": "/assets/favicon_1756796982884.jpeg",
+          "enabled": true
         }
       ],
       "subCategories": []
