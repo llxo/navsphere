@@ -176,6 +176,14 @@
               "description": "访问 aistudio.google.com",
               "icon": "/assets/favicon_1756802979779.png",
               "enabled": true
+            },
+            {
+              "id": "site_1756803271873_yloucxsua",
+              "title": "QWQ AI",
+              "href": "https://qwq32.com/",
+              "description": "An advanced AI assistant powered by QWQ-32B that provides thoughtful answers to your questions with detailed reasoning",
+              "icon": "/assets/favicon_1756803251784.ico",
+              "enabled": true
             }
           ]
         },
