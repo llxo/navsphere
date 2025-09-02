@@ -212,6 +212,14 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "9ec2cc62-8d99-4b1e-bf0c-8463e917f272",
+          "title": "提示词",
+          "icon": "Folder",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ],
       "description": "",
