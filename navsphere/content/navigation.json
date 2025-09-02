@@ -772,6 +772,14 @@
           "description": "维咔VikACG由VikACG Pte. Ltd.运营，致力于各类动漫资源分享以及漫友交流，我们的Slogan是：肥宅们的欢乐家园。",
           "icon": "/assets/favicon_1756796813517.ico",
           "enabled": true
+        },
+        {
+          "id": "site_1756796854432_c5jwsl5m9",
+          "title": "真红小站",
+          "href": "https://www.shinnku.com/",
+          "description": "这里是真红小站（失落小站）, 一个galgame资源站, (包括visual novel, 黄油, psp, krkr, ons gal资源 等), 收录了大部分的汉化galgame, 大部分的生肉galgame资源。",
+          "icon": "/assets/favicon_1756796840322.ico",
+          "enabled": true
         }
       ],
       "subCategories": []
