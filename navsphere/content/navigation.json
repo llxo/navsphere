@@ -104,6 +104,14 @@
           "description": "ACG盒子，ACG二次元导航网站，收录ACG二次元相关的网站，打造一个ACG二次元专属的网站。",
           "icon": "/assets/favicon_1756796997700.png",
           "enabled": true
+        },
+        {
+          "id": "site_1756801065152_rqkixuqwl",
+          "title": "VCB-Studio - 大家一起实现的故事！",
+          "href": "https://vcb-s.com/",
+          "description": "",
+          "icon": "/assets/favicon_1756801050749.png",
+          "enabled": true
         }
       ],
       "subCategories": []
