@@ -757,6 +757,15 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1756796781483",
+      "title": "ACG",
+      "icon": "Box",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
     }
   ]
 }
