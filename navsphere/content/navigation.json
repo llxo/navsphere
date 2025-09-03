@@ -189,6 +189,14 @@
           "description": "",
           "enabled": true,
           "items": []
+        },
+        {
+          "id": "29159e9c-2c21-4658-8e36-c53c3513eb8a",
+          "title": "影视",
+          "icon": "Video",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
