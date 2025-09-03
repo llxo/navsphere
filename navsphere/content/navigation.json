@@ -212,6 +212,14 @@
               "description": "移动云盘小站论坛 移动云盘资源站 移动云盘论坛",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898863942.ico",
               "enabled": true
+            },
+            {
+              "id": "site_1756899037178_5dz6zvxjo",
+              "title": "影窝迷",
+              "href": "https://yingmiwo.me/",
+              "description": "访问 yingmiwo.me",
+              "icon": "https://www.google.com/s2/favicons?sz=128&domain=yingmiwo.me",
+              "enabled": true
             }
           ]
         }
