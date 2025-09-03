@@ -228,6 +228,14 @@
               "description": "专注4K超清夸克网盘分享",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756899043073.png",
               "enabled": true
+            },
+            {
+              "id": "site_1756899202138_4y3ozqa03",
+              "title": "皮皮妖",
+              "href": "https://www.pipiyao.cc/",
+              "description": "皮皮妖提供最新最快的视频分享数据",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756899186195.png",
+              "enabled": true
             }
           ]
         }
