@@ -130,7 +130,16 @@
       "icon": "FolderOpen",
       "description": "",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "site_1756898398690_1f01try1d",
+          "title": "克隆窝",
+          "href": "https://www.uy5.net/",
+          "description": "访问 www.uy5.net",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898375653.png",
+          "enabled": true
+        }
+      ],
       "subCategories": [
         {
           "id": "d59b603b-a35a-415c-995d-6e318ed8d775",
@@ -153,14 +162,6 @@
               "href": "https://byrutgame.org/",
               "description": "Последние (полные) версии ПК игр со всеми обновлениями и дополнениями, с ежедневной публикацией новинок игр",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898340296.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1756898398690_1f01try1d",
-              "title": "克隆窝",
-              "href": "https://www.uy5.net/",
-              "description": "访问 www.uy5.net",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898375653.png",
               "enabled": true
             },
             {
