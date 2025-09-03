@@ -138,6 +138,14 @@
           "description": "mod下载站",
           "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756888796857.png",
           "enabled": true
+        },
+        {
+          "id": "site_1756898372814_5umijc0l2",
+          "title": "BYRUTOR",
+          "href": "https://byrutgame.org/",
+          "description": "Последние (полные) версии ПК игр со всеми обновлениями и дополнениями, с ежедневной публикацией новинок игр",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898340296.png",
+          "enabled": true
         }
       ],
       "subCategories": []
