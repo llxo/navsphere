@@ -37,13 +37,17 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
       }>
     }> = []
 
-    navigationData.navigationItems.forEach(category => {
+    navigationData.navigationItems
+      .filter((category) => category.enabled !== false) // 只搜索启用的分类
+      .forEach(category => {
       // 搜索主分类下的项目
-      const items = (category.items || []).filter(item => {
-        const titleMatch = item.title.toLowerCase().includes(query)
-        const descMatch = item.description?.toLowerCase().includes(query)
-        return titleMatch || descMatch
-      })
+      const items = (category.items || [])
+        .filter(item => item.enabled !== false) // 只搜索启用的项目
+        .filter(item => {
+          const titleMatch = item.title.toLowerCase().includes(query)
+          const descMatch = item.description?.toLowerCase().includes(query)
+          return titleMatch || descMatch
+        })
 
       // 搜索子分类下的项目
       const subResults: Array<{
@@ -52,12 +56,16 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
       }> = []
 
       if (category.subCategories) {
-        category.subCategories.forEach(sub => {
-          const subItems = (sub.items || []).filter(item => {
-            const titleMatch = item.title.toLowerCase().includes(query)
-            const descMatch = item.description?.toLowerCase().includes(query)
-            return titleMatch || descMatch
-          })
+        category.subCategories
+          .filter((sub) => sub.enabled !== false) // 只搜索启用的子分类
+          .forEach(sub => {
+          const subItems = (sub.items || [])
+            .filter(item => item.enabled !== false) // 只搜索启用的项目
+            .filter(item => {
+              const titleMatch = item.title.toLowerCase().includes(query)
+              const descMatch = item.description?.toLowerCase().includes(query)
+              return titleMatch || descMatch
+            })
           
           if (subItems.length > 0) {
             subResults.push({
@@ -182,7 +190,9 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
 
         <div className="px-3 sm:px-6 py-3 sm:py-6">
           <div className="space-y-6">
-            {navigationData.navigationItems.map((category) => (
+            {navigationData.navigationItems
+              .filter((category) => category.enabled !== false) // 过滤掉被禁用的分类
+              .map((category) => (
               <section key={category.id} id={category.id} className="scroll-m-16">
                 <div className="space-y-4">
                   <h2 className="text-base font-medium tracking-tight">
@@ -190,13 +200,17 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
                   </h2>
 
                   {category.subCategories && category.subCategories.length > 0 ? (
-                    category.subCategories.map((subCategory) => (
+                    category.subCategories
+                      .filter((subCategory) => subCategory.enabled !== false) // 过滤掉被禁用的子分类
+                      .map((subCategory) => (
                       <div key={subCategory.id} id={subCategory.id} className="space-y-3">
                         <h3 className="text-sm font-medium text-muted-foreground">
                           {subCategory.title}
                         </h3>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                          {(subCategory.items || []).map((item) => (
+                          {(subCategory.items || [])
+                            .filter((item) => item.enabled !== false) // 过滤掉被禁用的项目
+                            .map((item) => (
                             <NavigationCard key={item.id} item={item} />
                           ))}
                         </div>
@@ -204,7 +218,9 @@ export function NavigationContent({ navigationData, siteData }: NavigationConten
                     ))
                   ) : (
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-                      {(category.items || []).map((item) => (
+                      {(category.items || [])
+                        .filter((item) => item.enabled !== false) // 过滤掉被禁用的项目
+                        .map((item) => (
                         <NavigationCard key={item.id} item={item} />
                       ))}
                     </div>

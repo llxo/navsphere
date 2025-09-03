@@ -62,10 +62,12 @@ export function Sidebar({ className, navigationData, siteInfo, onClose }: Sideba
 
   // 使用对象存储每个分类的展开状态
   const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>(() => {
-    return navigationData.navigationItems.reduce((acc, category) => {
-      acc[category.id] = false
-      return acc
-    }, {} as Record<string, boolean>)
+    return navigationData.navigationItems
+      .filter((category) => category.enabled !== false) // 只为启用的分类创建状态
+      .reduce((acc, category) => {
+        acc[category.id] = false
+        return acc
+      }, {} as Record<string, boolean>)
   })
 
   const toggleCategory = (categoryId: string) => {
@@ -109,7 +111,9 @@ export function Sidebar({ className, navigationData, siteInfo, onClose }: Sideba
 
       <ScrollArea className="h-[calc(100vh-3.5rem)] px-3 py-2">
         <div className="space-y-1">
-          {navigationData.navigationItems.map((category) => (
+          {navigationData.navigationItems
+            .filter((category) => category.enabled !== false) // 过滤掉被禁用的分类
+            .map((category) => (
             <div key={category.id} className="py-2">
               <div className="flex items-center">
                 <Button
@@ -121,7 +125,7 @@ export function Sidebar({ className, navigationData, siteInfo, onClose }: Sideba
                   <span>{category.title}</span>
                 </Button>
 
-                {category.subCategories && category.subCategories.length > 0 && (
+                {category.subCategories && category.subCategories.filter((sub) => sub.enabled !== false).length > 0 && (
                   <Button
                     variant="ghost"
                     size="sm"
@@ -144,7 +148,9 @@ export function Sidebar({ className, navigationData, siteInfo, onClose }: Sideba
                     expandedCategories[category.id] ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   )}
                 >
-                  {category.subCategories.map((subCategory) => (
+                  {category.subCategories
+                    .filter((subCategory) => subCategory.enabled !== false) // 过滤掉被禁用的子分类
+                    .map((subCategory) => (
                     <Button
                       key={subCategory.id}
                       variant="ghost"
