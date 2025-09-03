@@ -220,6 +220,14 @@
               "description": "访问 yingmiwo.me",
               "icon": "https://www.google.com/s2/favicons?sz=128&domain=yingmiwo.me",
               "enabled": true
+            },
+            {
+              "id": "site_1756899105752_9gpiyramu",
+              "title": "4K指南",
+              "href": "https://xuexizhinan.com/",
+              "description": "专注4K超清夸克网盘分享",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756899043073.png",
+              "enabled": true
             }
           ]
         }
