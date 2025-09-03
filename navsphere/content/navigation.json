@@ -10,7 +10,7 @@
           "title": "Cloudflare",
           "href": "https://dash.cloudflare.com/",
           "description": "Cloudflare以向客户提供基于反向代理的内容分发网络及分布式域名解析服务为主要业务。",
-          "icon": "/assets/images/logos/cloudflar.ico",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/cloudflar.ico",
           "enabled": true
         },
         {
@@ -18,7 +18,7 @@
           "title": "LINUX DO",
           "href": "https://linux.do",
           "description": "访问 linux.do",
-          "icon": "/assets/favicon_1756800131919.png",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756800131919.png",
           "enabled": true
         },
         {
@@ -26,7 +26,7 @@
           "title": "取文件",
           "href": "https://quwenjian.cc/#/send",
           "description": "开箱即用的文件快传系统",
-          "icon": "/assets/favicon_1756801000571.png",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756801000571.png",
           "enabled": true
         },
         {
@@ -34,7 +34,15 @@
           "title": "URUSAI! | 隨便傳、隨便吵、隨便用！",
           "href": "https://urusai.cc/",
           "description": "",
-          "icon": "/assets/favicon_1756801021406.ico",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756801021406.ico",
+          "enabled": true
+        },
+        {
+          "id": "site_1756823194003_lgy8prlks",
+          "title": "果核剥壳",
+          "href": "https://www.ghxi.com/",
+          "description": "果核剥壳－互联网的净土",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756823132712.png",
           "enabled": true
         }
       ],
@@ -54,7 +62,7 @@
           "title": "维咔VikACG",
           "href": "https://www.vikacg.com/",
           "description": "维咔VikACG由VikACG Pte. Ltd.运营，致力于各类动漫资源分享以及漫友交流，我们的Slogan是：肥宅们的欢乐家园。",
-          "icon": "/assets/favicon_1756797548650.ico",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756797548650.ico",
           "enabled": true
         },
         {
@@ -62,7 +70,7 @@
           "title": "真红小站",
           "href": "https://www.shinnku.com/",
           "description": "这里是真红小站（失落小站）, 一个galgame资源站, (包括visual novel, 黄油, psp, krkr, ons gal资源 等), 收录了大部分的汉化galgame, 大部分的生肉galgame资源。",
-          "icon": "/assets/favicon_1756796840322.ico",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756796840322.ico",
           "enabled": true
         },
         {
@@ -70,7 +78,7 @@
           "title": "绮梦ACG",
           "href": "https://game.acgs.one/",
           "description": "专注分享次元世界-Galgame",
-          "icon": "/assets/favicon_1756796857675.png",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756796857675.png",
           "enabled": true
         },
         {
@@ -78,7 +86,7 @@
           "title": "青桔网",
           "href": "https://spare.qingju.org/",
           "description": "由青桔移植组建立的非盈利型galgame免费分享平台",
-          "icon": "/assets/favicon_1756796923154.png",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756796923154.png",
           "enabled": true
         },
         {
@@ -86,7 +94,7 @@
           "title": "梓澪の妙妙屋",
           "href": "https://zi0.cc/",
           "description": "免费Galgame仓库&下载站",
-          "icon": "/assets/favicon_1756796946439.png",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756796946439.png",
           "enabled": true
         },
         {
@@ -94,7 +102,7 @@
           "title": "量子ACG",
           "href": "https://lzacg.cc/",
           "description": "量子ACG是一个以游戏为主，进而推动日语学习的网站",
-          "icon": "/assets/favicon_1756796982884.jpeg",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756796982884.jpeg",
           "enabled": true
         },
         {
@@ -102,7 +110,7 @@
           "title": "ACG盒子",
           "href": "https://www.acgbox.link/dongmanzhuanqu",
           "description": "ACG盒子，ACG二次元导航网站，收录ACG二次元相关的网站，打造一个ACG二次元专属的网站。",
-          "icon": "/assets/favicon_1756796997700.png",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756796997700.png",
           "enabled": true
         },
         {
@@ -110,7 +118,7 @@
           "title": "VCB-Studio - 大家一起实现的故事！",
           "href": "https://vcb-s.com/",
           "description": "",
-          "icon": "/assets/favicon_1756801050749.png",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756801050749.png",
           "enabled": true
         }
       ],
@@ -134,7 +142,7 @@
               "title": "ChatGPT",
               "href": "https://chat.openai.com/",
               "description": "OpenAI开发的人工智能聊天机器人程序。",
-              "icon": "/assets/images/logos/chatgpt.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/chatgpt.png",
               "enabled": true
             },
             {
@@ -142,7 +150,7 @@
               "title": "Gemini",
               "href": "https://gemini.google.com/u/1/app",
               "description": "Google开发的生成式人工智能聊天机器人。它基于同名的Gemini系列大型语言模型。",
-              "icon": "/assets/images/logos/gemini.svg",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/gemini.svg",
               "enabled": true
             },
             {
@@ -150,7 +158,7 @@
               "title": "DeepSeek",
               "href": "https://chat.deepseek.com/",
               "description": "Chat with DeepSeek AI – your intelligent assistant for coding, content creation, file reading, and more. Upload documents, engage in long-context conversations, and get expert help in AI, natural language processing, and beyond. | 深度求索（DeepSeek）助力编程代码开发、创意写作、文件处理等任务，支持文件上传及长文本对话，随时为您提供高效的AI支持。",
-              "icon": "/assets/favicon_1756803084242.svg",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756803084242.svg",
               "enabled": true
             },
             {
@@ -158,7 +166,7 @@
               "title": "Qwen Chat",
               "href": "https://chat.qwen.ai/",
               "description": "",
-              "icon": "/assets/favicon_1756802960144.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756802960144.png",
               "enabled": true
             },
             {
@@ -166,7 +174,7 @@
               "title": "Aistudio",
               "href": "https://aistudio.google.com/u/1/prompts/new_chat?pli=1",
               "description": "访问 aistudio.google.com",
-              "icon": "/assets/favicon_1756802979779.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756802979779.png",
               "enabled": true
             },
             {
@@ -174,32 +182,7 @@
               "title": "QWQ AI",
               "href": "https://qwq32.com/",
               "description": "An advanced AI assistant powered by QWQ-32B that provides thoughtful answers to your questions with detailed reasoning",
-              "icon": "/assets/favicon_1756803251784.ico",
-              "enabled": true
-            }
-          ]
-        },
-        {
-          "id": "cbb3e33d-408b-41ba-9e9a-e0444303e3ff",
-          "title": "生产力工具",
-          "icon": "Book",
-          "description": "",
-          "enabled": true,
-          "items": []
-        },
-        {
-          "id": "21bf96f3-acb0-4e28-aaa8-2759ac55d278",
-          "title": "MCP Server",
-          "icon": "Edit",
-          "description": "",
-          "enabled": true,
-          "items": [
-            {
-              "id": "1752554261491",
-              "title": "MCP Server 集合站",
-              "href": "https://smithery.ai/",
-              "description": "各种各样的 MCP Server",
-              "icon": "/assets/img_1752554273115.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756803251784.ico",
               "enabled": true
             }
           ]
@@ -216,7 +199,7 @@
               "title": "AI 提示词 - WayToAGI",
               "href": "https://www.waytoagi.com/zh/prompts",
               "description": "精选高效的AI提示词库，助力创作者和开发者解锁人工智能的潜力。通过我们的提示词和策略，优化您的AI工具使用效率，激发创意思维，提升产出质量。",
-              "icon": "/assets/favicon_1756803170312.ico",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756803170312.ico",
               "enabled": true
             }
           ]
@@ -245,7 +228,7 @@
               "title": "lucide",
               "href": "https://lucide.dev/icons/house",
               "description": "Beautiful &\nconsistent icons",
-              "icon": "/assets/img_1750831362985.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1750831362985.png",
               "enabled": true
             }
           ]
@@ -262,7 +245,7 @@
               "title": "shadcn ",
               "href": "https://ui.shadcn.com/",
               "description": "Build your component library\nBeautifully designed components that you can copy and paste into your apps. Made with Tailwind CSS. Open source.",
-              "icon": "/assets/img_1735265752690.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1735265752690.png",
               "enabled": true
             },
             {
@@ -270,7 +253,7 @@
               "title": "shadcn ui  Theme",
               "href": "https://tweakcn.com/",
               "description": "Design Your Perfect \nshadcn/ui\n Theme\nCustomize colors, typography, and layouts with a real-time preview. No signup required.",
-              "icon": "/assets/img_1751433579053.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1751433579053.png",
               "enabled": true
             }
           ]
@@ -287,7 +270,7 @@
               "title": "Cloudflare",
               "href": "https://dash.cloudflare.com/",
               "description": "Cloudflare以向客户提供基于反向代理的内容分发网络及分布式域名解析服务为主要业务。",
-              "icon": "/assets/images/logos/cloudflar.ico",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/cloudflar.ico",
               "enabled": true
             },
             {
@@ -295,7 +278,7 @@
               "title": "Vercel",
               "href": "https://vercel.com/",
               "description": "Vercel 提供开发者工具和云基础设施，帮助构建、扩展和保护更快、更个性化的网络应用。",
-              "icon": "/assets/images/logos/vercel.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/vercel.png",
               "enabled": true
             },
             {
@@ -303,7 +286,7 @@
               "title": "netlify",
               "href": "https://www.netlify.com/",
               "description": "Netlify is the essential platform for the delivery of exceptional and dynamic web experiences, without limitations.",
-              "icon": "/assets/img_1735612745862.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1735612745862.png",
               "enabled": true
             }
           ]
@@ -320,7 +303,7 @@
               "title": "draw.io",
               "href": "https://www.drawio.com/",
               "description": "可以绘制架构图、流程图，软件周期内的其它设计图。为团队绘制安全第一的图表。\n将您的存储带到我们的在线工具，或使用桌面应用程序在本地保存。",
-              "icon": "/assets/img_1736922080517.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1736922080517.png",
               "enabled": true
             },
             {
@@ -328,7 +311,7 @@
               "title": "ProccessOn",
               "href": "https://www.processon.com/",
               "description": "ProccessOn是一款优秀的国产在线协作画图软件，非常好用，也非常漂亮。专业强大的作图工具，支持多人实时在线协作，可用于原型图、UML、BPMN、网络拓扑图等多种图形绘制\n",
-              "icon": "/assets/img_1736922262462.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1736922262462.png",
               "enabled": true
             },
             {
@@ -336,7 +319,7 @@
               "title": "Excalidraw",
               "href": "https://excalidraw.com/",
               "description": "Excalidraw是免费的在线协作画图工具。\n\n手写风格的草图非常好看；\n漂亮的图库。",
-              "icon": "/assets/img_1736922499401.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1736922499401.png",
               "enabled": true
             }
           ]
@@ -353,7 +336,7 @@
               "title": "Cursor",
               "href": "https://www.cursor.com/",
               "description": "The AI Code Editor Built to make you extraordinarily productive, Cursor is the best way to code with AI.",
-              "icon": "/assets/img_1737529713172.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1737529713172.png",
               "enabled": true
             },
             {
@@ -361,7 +344,7 @@
               "title": "Windsurf",
               "href": "https://codeium.com/",
               "description": "Introducing the Windsurf Editor\nThe new purpose-built IDE to harness magic",
-              "icon": "/assets/img_1737529843741.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1737529843741.png",
               "enabled": true
             },
             {
@@ -369,7 +352,7 @@
               "title": "GitHub Copilot",
               "href": "https://github.com/features/copilot",
               "description": "The AI editor for everyone",
-              "icon": "/assets/img_1737530043708.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1737530043708.png",
               "enabled": true
             },
             {
@@ -377,7 +360,7 @@
               "title": "Trae",
               "href": "https://www.trae.ai/",
               "description": "字节新出的 Cursor 竞品 Trae ，可以用 claude3.5，限时免费\n，它的 Builder 相当于 Cursor 的 Composer 和 Agent 合体，建议默认使用 Builder。",
-              "icon": "/assets/img_1737530421138.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1737530421138.png",
               "enabled": true
             },
             {
@@ -385,7 +368,7 @@
               "title": "Kiro",
               "href": "https://kiro.dev/",
               "description": "The AI IDE for prototype to production\n",
-              "icon": "/assets/img_1752662633580.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1752662633580.png",
               "enabled": true
             },
             {
@@ -393,7 +376,7 @@
               "title": "Claude code",
               "href": "https://www.anthropic.com/claude-code",
               "description": "Unleash Claude’s raw power directly in your terminal. Search million-line codebases instantly. Turn hours-long workflows into a single command. Your tools. Your workflow. Your codebase, evolving at thought speed.",
-              "icon": "/assets/img_1752662771107.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1752662771107.png",
               "enabled": true
             }
           ]
@@ -410,7 +393,7 @@
               "title": "namecheap",
               "href": "https://www.namecheap.com/",
               "description": "Register domain names at Namecheap. Buy cheap domain names and enjoy 24/7 support. With over 18 million domains under management, you know you’re in good hands.",
-              "icon": "/assets/favicon_1754295511938.ico",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1754295511938.ico",
               "enabled": true
             }
           ]
@@ -431,19 +414,11 @@
           "description": "",
           "items": [
             {
-              "id": "3_1",
-              "title": "TableConvert",
-              "href": "https://tableconvert.com/",
-              "description": "Excel转sql在线工具。将你的Excel数据转换成一个网络友好格式,包括HTML、JSON和XML,还可以把Excel 转换成Sql,excel 表格转成 Markdown",
-              "icon": "/assets/images/logos/tableconvert.png",
-              "enabled": true
-            },
-            {
               "id": "3_2",
               "title": "JSON Editor Online",
               "href": "https://jsoneditoronline.org/",
               "description": "在线的JSON编辑器，包括格式化，可视化，对比，显示行号功能。",
-              "icon": "/assets/images/logos/json.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/json.png",
               "enabled": true
             },
             {
@@ -451,7 +426,7 @@
               "title": "Beautifier",
               "href": "https://beautifier.io/",
               "description": "Beautify JavaScript, JSON, React.js, HTML, CSS, SCSS, and SASS",
-              "icon": "/assets/images/logos/beautifier.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/beautifier.png",
               "enabled": true
             },
             {
@@ -459,7 +434,7 @@
               "title": "SQL格式化",
               "href": "https://www.dpriver.com/pp/sqlformat.htm",
               "description": "在线美化SQL语句的工具，格式化方便阅读",
-              "icon": "/assets/images/logos/sqlformat.ico",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/sqlformat.ico",
               "enabled": true
             },
             {
@@ -467,7 +442,7 @@
               "title": "TinyPNG",
               "href": "https://tinypng.com/",
               "description": "在线图片压缩工具",
-              "icon": "/assets/images/logos/tinypng.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/tinypng.png",
               "enabled": true
             },
             {
@@ -475,7 +450,31 @@
               "title": "ScreenShots.pro",
               "href": "https://screenshots.pro/",
               "description": "App Screenshot Generator for App Store&Google Play,Create panoramic screenshots for iOS and Android apps. No account needed.",
-              "icon": "/assets/img_1735258064656.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/img_1735258064656.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1756818972563_gqqenjl0k",
+              "title": "中国科学技术大学测速网站",
+              "href": "https://test.ustc.edu.cn/",
+              "description": "测速",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756818919462.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1756819043226_m9wg2ltee",
+              "title": "SPEEDTEST",
+              "href": "https://www.speedtest.net/zh-Hans",
+              "description": "测速",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756818979874.ico",
+              "enabled": true
+            },
+            {
+              "id": "site_1756822200840_o147qdxiq",
+              "title": "Internet Speed Test | Fast.com",
+              "href": "https://fast.com/",
+              "description": "How fast is your download speed? In seconds, FAST.com&#39;s simple Internet speed test will estimate your ISP speed.",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/favicon_1756822176586.png",
               "enabled": true
             }
           ],
@@ -493,7 +492,7 @@
               "title": "photoshop",
               "href": "https://www.adobe.com/cn/products/photoshop.html",
               "description": "Photoshop不需要解释",
-              "icon": "/assets/images/logos/photoshop.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/photoshop.png",
               "enabled": true
             },
             {
@@ -501,7 +500,7 @@
               "title": "Affinity Designer",
               "href": "https://affinity.serif.com/",
               "description": "专业创意软件",
-              "icon": "/assets/images/logos/AffinityDesigner.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/AffinityDesigner.png",
               "enabled": true
             },
             {
@@ -509,7 +508,7 @@
               "title": "Illustrator",
               "href": "https://www.adobe.com/cn/products/illustrator/",
               "description": "矢量图形和插图。",
-              "icon": "/assets/images/logos/Illustrator.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/Illustrator.png",
               "enabled": true
             }
           ],
@@ -527,7 +526,7 @@
               "title": "Figma",
               "href": "https://www.figma.com/",
               "description": "在线UI设计工具",
-              "icon": "/assets/images/logos/figma.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/figma.png",
               "enabled": true
             }
           ],
@@ -545,7 +544,7 @@
               "title": "Adobe After Effects CC",
               "href": "https://www.adobe.com/cn/products/aftereffects/",
               "description": "电影般的视觉效果和动态图形。",
-              "icon": "/assets/images/logos/AdobeAfterEffectsCC.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/AdobeAfterEffectsCC.png",
               "enabled": true
             },
             {
@@ -553,7 +552,7 @@
               "title": "principle",
               "href": "http://principleformac.com/",
               "description": "Animate Your Ideas, Design Better Apps",
-              "icon": "/assets/images/logos/principle.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/principle.png",
               "enabled": true
             },
             {
@@ -561,7 +560,7 @@
               "title": "flinto",
               "href": "https://www.flinto.com/",
               "description": "Flinto is a Mac app used by top designers around the world to create interactive and animated prototypes of their app designs.",
-              "icon": "/assets/images/logos/flinto.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/flinto.png",
               "enabled": true
             },
             {
@@ -569,7 +568,7 @@
               "title": "framer",
               "href": "https://framer.com/",
               "description": "Design everything from detailed icons to high-fidelity interactions—all in one place.",
-              "icon": "/assets/images/logos/framer.png",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere-data/main/public/assets/images/logos/framer.png",
               "enabled": true
             }
           ],
@@ -581,192 +580,12 @@
           "href": "#在线配色",
           "icon": "Book",
           "description": "",
-          "items": [
-            {
-              "id": "7_1",
-              "title": "Color Hunt",
-              "href": "https://colorhunt.co/",
-              "description": "色彩搭配",
-              "icon": "/assets/images/logos/colorhunt.png",
-              "enabled": true
-            }
-          ],
+          "items": [],
           "enabled": true
         }
       ],
       "description": "",
       "enabled": true
-    },
-    {
-      "id": "8",
-      "title": "素材资源",
-      "icon": "linecons-thumbs-up",
-      "items": [],
-      "subCategories": [
-        {
-          "id": "8_1",
-          "title": "图标素材",
-          "href": "#图标素材",
-          "icon": "",
-          "description": "",
-          "items": [
-            {
-              "id": "8_1_1",
-              "title": "Iconfinder",
-              "href": "https://www.iconfinder.com",
-              "description": "2,100,000+ free and premium vector icons.",
-              "icon": "/assets/images/logos/Iconfinder.png",
-              "enabled": true
-            },
-            {
-              "id": "8_1_2",
-              "title": "iconfont",
-              "href": "http://www.iconfont.cn/",
-              "description": "阿里巴巴矢量图标库",
-              "icon": "/assets/images/logos/iconfont.png",
-              "enabled": true
-            },
-            {
-              "id": "8_1_3",
-              "title": "iconmonstr",
-              "href": "https://iconmonstr.com/",
-              "description": "Free simple icons for your next project",
-              "icon": "/assets/images/logos/iconmonstr.png",
-              "enabled": true
-            },
-            {
-              "id": "8_1_4",
-              "title": "Icon Archive",
-              "href": "http://www.iconarchive.com/",
-              "description": "Search 590,912 free icons",
-              "icon": "/assets/images/logos/iconarchive.png",
-              "enabled": true
-            },
-            {
-              "id": "8_1_5",
-              "title": "FindIcons",
-              "href": "https://findicons.com/",
-              "description": "Search through 300,000 free icons",
-              "icon": "/assets/images/logos/FindIcons.png",
-              "enabled": true
-            },
-            {
-              "id": "8_1_6",
-              "title": "IcoMoonApp",
-              "href": "https://icomoon.io/app/",
-              "description": "Icon Font, SVG, PDF & PNG Generator",
-              "icon": "/assets/images/logos/IcoMoonApp.png",
-              "enabled": true
-            },
-            {
-              "id": "8_1_8",
-              "title": "flaticon",
-              "href": "https://www.flaticon.com/",
-              "description": "634,000+ Free vector icons in SVG, PSD, PNG, EPS format or as ICON FONT.",
-              "icon": "/assets/images/logos/flaticon.png",
-              "enabled": true
-            },
-            {
-              "id": "8_1_9",
-              "title": "UICloud",
-              "href": "http://ui-cloud.com/",
-              "description": "The largest user interface design database in the world.",
-              "icon": "/assets/images/logos/UICloud.png",
-              "enabled": true
-            },
-            {
-              "id": "8_1_10",
-              "title": "Material icons",
-              "href": "https://material.io/icons/",
-              "description": "Access over 900 material system icons, available in a variety of sizes and densities, and as a web font.",
-              "icon": "/assets/images/logos/Materialicons.png",
-              "enabled": true
-            },
-            {
-              "id": "8_1_11",
-              "title": "Font Awesome Icon",
-              "href": "fontawesomeicon",
-              "description": "The complete set of 675 icons in Font Awesome",
-              "icon": "/assets/images/logos/fontawesomeicon.png",
-              "enabled": true
-            },
-            {
-              "id": "8_1_13",
-              "title": "Simpleline Icons",
-              "href": "http://simplelineicons.com/",
-              "description": "Simple line Icons pack",
-              "icon": "/assets/images/logos/simplelineicons.png",
-              "enabled": true
-            }
-          ]
-        },
-        {
-          "id": "8_2",
-          "title": "LOGO设计",
-          "href": "#LOGO设计",
-          "icon": "",
-          "description": "",
-          "items": [
-            {
-              "id": "8_2_1",
-              "title": "Iconsfeed",
-              "href": "http://www.iconsfeed.com/",
-              "description": "iOS icons gallery",
-              "icon": "/assets/images/logos/iconsfeed.png",
-              "enabled": true
-            },
-            {
-              "id": "8_2_2",
-              "title": "iOS Icon Gallery",
-              "href": "http://iosicongallery.com/",
-              "description": "Showcasing beautiful icon designs from the iOS App Store",
-              "icon": "/assets/images/logos/iosicongallery.png",
-              "enabled": true
-            },
-            {
-              "id": "8_2_3",
-              "title": "World Vector Logo",
-              "href": "https://worldvectorlogo.com/",
-              "description": "Brand logos free to download",
-              "icon": "/assets/images/logos/worldvectorlogo.png",
-              "enabled": true
-            },
-            {
-              "id": "8_2_4",
-              "title": "Instant Logo Search",
-              "href": "http://instantlogosearch.com/",
-              "description": "Search & download thousands of logos instantly",
-              "icon": "/assets/images/logos/InstantLogoSearch.png",
-              "enabled": true
-            }
-          ]
-        },
-        {
-          "id": "8_3",
-          "title": "平面素材",
-          "href": "#平面素材",
-          "icon": "",
-          "description": "",
-          "items": [
-            {
-              "id": "8_3_1",
-              "title": "Freepik",
-              "href": "https://www.freepik.com/",
-              "description": "免费矢量素材",
-              "icon": "/assets/images/logos/freepik.png",
-              "enabled": true
-            },
-            {
-              "id": "8_3_2",
-              "title": "Unsplash",
-              "href": "https://unsplash.com/",
-              "description": "免费高清图片",
-              "icon": "/assets/images/logos/unsplash.png",
-              "enabled": true
-            }
-          ]
-        }
-      ]
     }
   ]
 }
