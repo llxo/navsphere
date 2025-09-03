@@ -172,7 +172,16 @@
           "enabled": true
         }
       ],
-      "subCategories": []
+      "subCategories": [
+        {
+          "id": "d59b603b-a35a-415c-995d-6e318ed8d775",
+          "title": "游戏",
+          "icon": "Home",
+          "description": "",
+          "enabled": true,
+          "items": []
+        }
+      ]
     },
     {
       "id": "9",
