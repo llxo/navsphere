@@ -30,14 +30,6 @@
           "enabled": true
         },
         {
-          "id": "site_1756823194003_lgy8prlks",
-          "title": "果核剥壳",
-          "href": "https://www.ghxi.com/",
-          "description": "果核剥壳－互联网的净土",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756823132712.png",
-          "enabled": true
-        },
-        {
           "id": "site_1756881288844_cyk1vjmrm",
           "title": "我也不知道",
           "href": "https://preview01.me/",
@@ -194,6 +186,14 @@
               "href": "https://www.uy5.net/",
               "description": "访问 www.uy5.net",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898375653.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1756823194003_lgy8prlks",
+              "title": "果核剥壳",
+              "href": "https://www.ghxi.com/",
+              "description": "果核剥壳－互联网的净土",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756823132712.png",
               "enabled": true
             }
           ]
