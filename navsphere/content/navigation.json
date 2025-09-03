@@ -120,6 +120,14 @@
           "description": "大家一起实现的故事！",
           "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756801050749.png",
           "enabled": true
+        },
+        {
+          "id": "site_1756898943421_tio7b7nd3",
+          "title": "Mikan Project",
+          "href": "https://mikanani.me/",
+          "description": "蜜柑计划：新一代的动漫下载站",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898904780.ico",
+          "enabled": true
         }
       ],
       "subCategories": []
