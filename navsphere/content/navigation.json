@@ -138,14 +138,6 @@
           "description": "",
           "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898506653.ico",
           "enabled": true
-        },
-        {
-          "id": "site_1756898568753_qsncco4hs",
-          "title": "flysheep资源避难所",
-          "href": "https://www.flysheep6.com/",
-          "description": "一个免费的二次元风格下载站 收录steam epic 单机资源 switch游戏",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898536156.png",
-          "enabled": true
         }
       ],
       "subCategories": [
@@ -178,6 +170,14 @@
               "href": "https://www.uy5.net/",
               "description": "访问 www.uy5.net",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898375653.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1756898568753_qsncco4hs",
+              "title": "flysheep资源避难所",
+              "href": "https://www.flysheep6.com/",
+              "description": "一个免费的二次元风格下载站 收录steam epic 单机资源 switch游戏",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898536156.png",
               "enabled": true
             }
           ]
