@@ -132,14 +132,6 @@
       "enabled": true,
       "items": [
         {
-          "id": "site_1756888810023_8a67wy89j",
-          "title": "Nexus Mods",
-          "href": "https://www.nexusmods.com/",
-          "description": "mod下载站",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756888796857.png",
-          "enabled": true
-        },
-        {
           "id": "site_1756898372814_5umijc0l2",
           "title": "BYRUTOR",
           "href": "https://byrutgame.org/",
@@ -179,7 +171,16 @@
           "icon": "Home",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1756888810023_8a67wy89j",
+              "title": "Nexus Mods",
+              "href": "https://www.nexusmods.com/",
+              "description": "mod下载站",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756888796857.png",
+              "enabled": true
+            }
+          ]
         }
       ]
     },
