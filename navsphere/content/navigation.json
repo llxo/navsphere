@@ -133,55 +133,6 @@
       "items": [],
       "subCategories": [
         {
-          "id": "29159e9c-2c21-4658-8e36-c53c3513eb8a",
-          "title": "影视",
-          "icon": "Video",
-          "description": "",
-          "enabled": true,
-          "items": [
-            {
-              "id": "site_1756898882447_p56royt8b",
-              "title": "盘Ta-云盘资源共享站",
-              "href": "https://www.91panta.cn/",
-              "description": "移动云盘小站论坛 移动云盘资源站 移动云盘论坛",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898863942.ico",
-              "enabled": true
-            },
-            {
-              "id": "site_1756899105752_9gpiyramu",
-              "title": "4K指南",
-              "href": "https://xuexizhinan.com/",
-              "description": "专注4K超清夸克网盘分享",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756899043073.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1756899202138_4y3ozqa03",
-              "title": "皮皮妖",
-              "href": "https://www.pipiyao.cc/",
-              "description": "皮皮妖提供最新最快的视频分享数据",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756899186195.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1756960748981_s2a4jsfsf",
-              "title": "PanSou 盘搜",
-              "href": "https://so.252035.xyz/",
-              "description": "PanSou是一款高性能的网盘资源搜索API服务，支持TG频道和插件搜索。系统设计以性能和可扩展性为核心，支持多频道多插件并发搜索、结果智能排序和网盘类型分类。",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756960734245.ico",
-              "enabled": true
-            },
-            {
-              "id": "site_1756960771824_v8eppy16p",
-              "title": "盘搜",
-              "href": "https://pansou.jkai.de/",
-              "description": "盘搜是一个强大的网盘搜索工具，聚合来自Telegram频道的海量资源，支持115、百度云、阿里云盘等主流网盘。快速、精准地找到您需要的电影、音乐、游戏、学习资料等。",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756960749217.png",
-              "enabled": true
-            }
-          ]
-        },
-        {
           "id": "52a68917-2c8e-4147-8133-c7879044e5b6",
           "title": "软件",
           "icon": "LayoutGrid",
@@ -243,6 +194,55 @@
               "href": "https://koyso.com/",
               "description": "",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898506653.ico",
+              "enabled": true
+            }
+          ]
+        },
+        {
+          "id": "29159e9c-2c21-4658-8e36-c53c3513eb8a",
+          "title": "影视",
+          "icon": "Video",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "site_1756898882447_p56royt8b",
+              "title": "盘Ta-云盘资源共享站",
+              "href": "https://www.91panta.cn/",
+              "description": "移动云盘小站论坛 移动云盘资源站 移动云盘论坛",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898863942.ico",
+              "enabled": true
+            },
+            {
+              "id": "site_1756899105752_9gpiyramu",
+              "title": "4K指南",
+              "href": "https://xuexizhinan.com/",
+              "description": "专注4K超清夸克网盘分享",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756899043073.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1756899202138_4y3ozqa03",
+              "title": "皮皮妖",
+              "href": "https://www.pipiyao.cc/",
+              "description": "皮皮妖提供最新最快的视频分享数据",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756899186195.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1756960748981_s2a4jsfsf",
+              "title": "PanSou 盘搜",
+              "href": "https://so.252035.xyz/",
+              "description": "PanSou是一款高性能的网盘资源搜索API服务，支持TG频道和插件搜索。系统设计以性能和可扩展性为核心，支持多频道多插件并发搜索、结果智能排序和网盘类型分类。",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756960734245.ico",
+              "enabled": true
+            },
+            {
+              "id": "site_1756960771824_v8eppy16p",
+              "title": "盘搜",
+              "href": "https://pansou.jkai.de/",
+              "description": "盘搜是一个强大的网盘搜索工具，聚合来自Telegram频道的海量资源，支持115、百度云、阿里云盘等主流网盘。快速、精准地找到您需要的电影、音乐、游戏、学习资料等。",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756960749217.png",
               "enabled": true
             }
           ]
