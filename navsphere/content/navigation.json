@@ -538,15 +538,6 @@
             }
           ],
           "enabled": true
-        },
-        {
-          "id": "7",
-          "title": "在线配色",
-          "href": "#在线配色",
-          "icon": "Book",
-          "description": "",
-          "items": [],
-          "enabled": true
         }
       ],
       "description": "",
