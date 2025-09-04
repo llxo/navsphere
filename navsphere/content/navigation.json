@@ -379,14 +379,6 @@
           "description": "",
           "items": [
             {
-              "id": "3_2",
-              "title": "JSON Editor Online",
-              "href": "https://jsoneditoronline.org/",
-              "description": "在线的JSON编辑器，包括格式化，可视化，对比，显示行号功能。",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/images/logos/json.png",
-              "enabled": true
-            },
-            {
               "id": "3_3",
               "title": "Beautifier",
               "href": "https://beautifier.io/",
