@@ -129,6 +129,14 @@
               "description": "盘搜是一个强大的网盘搜索工具，聚合来自Telegram频道的海量资源，支持115、百度云、阿里云盘等主流网盘。快速、精准地找到您需要的电影、音乐、游戏、学习资料等。",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756960749217.png",
               "enabled": true
+            },
+            {
+              "id": "site_1756973969809_tkhhweatx",
+              "title": "枫叶音乐盒",
+              "href": "https://mu-jie.cc/musicBox/",
+              "description": "枫叶音乐盒，一个在线音乐播放器。点开就能听音乐，随时随地享受音乐，支持在线播放、搜索、收藏、导入音乐APP歌单、自建歌单、歌单推荐/分类等功能。",
+              "icon": "https://mu-jie.cc/musicBox/favicon.ico",
+              "enabled": true
             }
           ]
         },
