@@ -186,6 +186,14 @@
               "description": "",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898506653.ico",
               "enabled": true
+            },
+            {
+              "id": "site_1756974147298_7r1w8zgnw",
+              "title": "小叽资源",
+              "href": "https://steamzg.com/",
+              "description": "免费单机游戏电影动漫软件分享",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756974127489.png",
+              "enabled": true
             }
           ]
         }
