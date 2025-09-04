@@ -379,14 +379,6 @@
           "description": "",
           "items": [
             {
-              "id": "3_3",
-              "title": "Beautifier",
-              "href": "https://beautifier.io/",
-              "description": "Beautify JavaScript, JSON, React.js, HTML, CSS, SCSS, and SASS",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/images/logos/beautifier.png",
-              "enabled": true
-            },
-            {
               "id": "3_4",
               "title": "SQL格式化",
               "href": "https://www.dpriver.com/pp/sqlformat.htm",
