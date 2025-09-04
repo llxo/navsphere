@@ -379,14 +379,6 @@
           "description": "",
           "items": [
             {
-              "id": "3_5",
-              "title": "TinyPNG",
-              "href": "https://tinypng.com/",
-              "description": "在线图片压缩工具",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/images/logos/tinypng.png",
-              "enabled": true
-            },
-            {
               "id": "1735256523960",
               "title": "ScreenShots.pro",
               "href": "https://screenshots.pro/",
