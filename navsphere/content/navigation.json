@@ -444,48 +444,6 @@
             }
           ],
           "enabled": true
-        },
-        {
-          "id": "6",
-          "title": "交互动效",
-          "href": "#交互动效",
-          "icon": "Book",
-          "description": "",
-          "items": [
-            {
-              "id": "6_1",
-              "title": "Adobe After Effects CC",
-              "href": "https://www.adobe.com/cn/products/aftereffects/",
-              "description": "电影般的视觉效果和动态图形。",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/images/logos/AdobeAfterEffectsCC.png",
-              "enabled": true
-            },
-            {
-              "id": "6_2",
-              "title": "principle",
-              "href": "http://principleformac.com/",
-              "description": "Animate Your Ideas, Design Better Apps",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/images/logos/principle.png",
-              "enabled": true
-            },
-            {
-              "id": "6_3",
-              "title": "flinto",
-              "href": "https://www.flinto.com/",
-              "description": "Flinto is a Mac app used by top designers around the world to create interactive and animated prototypes of their app designs.",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/images/logos/flinto.png",
-              "enabled": true
-            },
-            {
-              "id": "6_4",
-              "title": "framer",
-              "href": "https://framer.com/",
-              "description": "Design everything from detailed icons to high-fidelity interactions—all in one place.",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/images/logos/framer.png",
-              "enabled": true
-            }
-          ],
-          "enabled": true
         }
       ],
       "description": "",
