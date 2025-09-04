@@ -409,6 +409,14 @@
               "description": "测速",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756822176586.png",
               "enabled": true
+            },
+            {
+              "id": "site_1756988796305_ao9qiuslq",
+              "title": "Xget URL 转换器",
+              "href": "https://xuc.xi-xu.me",
+              "description": "反代加速",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756988760687.ico",
+              "enabled": true
             }
           ],
           "enabled": true
