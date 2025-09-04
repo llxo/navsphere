@@ -379,14 +379,6 @@
           "description": "",
           "items": [
             {
-              "id": "1735256523960",
-              "title": "ScreenShots.pro",
-              "href": "https://screenshots.pro/",
-              "description": "App Screenshot Generator for App Store&Google Play,Create panoramic screenshots for iOS and Android apps. No account needed.",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/img_1735258064656.png",
-              "enabled": true
-            },
-            {
               "id": "site_1756818972563_gqqenjl0k",
               "title": "中国科学技术大学测速网站",
               "href": "https://test.ustc.edu.cn/",
