@@ -379,14 +379,6 @@
           "description": "",
           "items": [
             {
-              "id": "3_4",
-              "title": "SQL格式化",
-              "href": "https://www.dpriver.com/pp/sqlformat.htm",
-              "description": "在线美化SQL语句的工具，格式化方便阅读",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/images/logos/sqlformat.ico",
-              "enabled": true
-            },
-            {
               "id": "3_5",
               "title": "TinyPNG",
               "href": "https://tinypng.com/",
