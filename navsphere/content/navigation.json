@@ -154,6 +154,14 @@
               "description": "果核剥壳－互联网的净土",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756823132712.png",
               "enabled": true
+            },
+            {
+              "id": "site_1756960975981_iurm3ime4",
+              "title": "电报值得看",
+              "href": "https://dbzdk.com/",
+              "description": "电报值得看是一个聚合多种优质Telegram频道的网站，您可以轻松浏览和订阅各种分类的Telegram频道内容。从科技、财经到娱乐、生活，电报值得看为您带来最新、最热门的频道推荐，帮助您高效获取实时信息，提升您的阅读体验。无论是个人兴趣还是行业动态，我们为您提供最全面的Telegram频道资源。",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756960956060.png",
+              "enabled": true
             }
           ]
         },
