@@ -228,6 +228,14 @@
               "description": "皮皮妖提供最新最快的视频分享数据",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756899186195.png",
               "enabled": true
+            },
+            {
+              "id": "site_1756960748981_s2a4jsfsf",
+              "title": "PanSou 盘搜",
+              "href": "https://so.252035.xyz/",
+              "description": "",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756960734245.ico",
+              "enabled": true
             }
           ]
         }
