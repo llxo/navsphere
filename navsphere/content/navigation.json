@@ -43,88 +43,6 @@
       "enabled": true
     },
     {
-      "id": "1756796781483",
-      "title": "ACG",
-      "icon": "Box",
-      "description": "",
-      "enabled": true,
-      "items": [
-        {
-          "id": "site_1756796833879_iccc1z03s",
-          "title": "维咔VikACG",
-          "href": "https://www.vikacg.com/",
-          "description": "维咔VikACG由VikACG Pte. Ltd.运营，致力于各类动漫资源分享以及漫友交流，我们的Slogan是：肥宅们的欢乐家园。",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756797548650.ico",
-          "enabled": true
-        },
-        {
-          "id": "site_1756796854432_c5jwsl5m9",
-          "title": "真红小站",
-          "href": "https://www.shinnku.com/",
-          "description": "这里是真红小站（失落小站）, 一个galgame资源站, (包括visual novel, 黄油, psp, krkr, ons gal资源 等), 收录了大部分的汉化galgame, 大部分的生肉galgame资源。",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796840322.ico",
-          "enabled": true
-        },
-        {
-          "id": "site_1756796869403_do2otk61d",
-          "title": "绮梦ACG",
-          "href": "https://game.acgs.one/",
-          "description": "专注分享次元世界-Galgame",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796857675.png",
-          "enabled": true
-        },
-        {
-          "id": "site_1756796940816_recnyxia3",
-          "title": "青桔网",
-          "href": "https://spare.qingju.org/",
-          "description": "由青桔移植组建立的非盈利型galgame免费分享平台",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796923154.png",
-          "enabled": true
-        },
-        {
-          "id": "site_1756796972348_qixtvxhnn",
-          "title": "梓澪の妙妙屋",
-          "href": "https://zi0.cc/",
-          "description": "免费Galgame仓库&下载站",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796946439.png",
-          "enabled": true
-        },
-        {
-          "id": "site_1756796994257_xmv02ajvv",
-          "title": "量子ACG",
-          "href": "https://lzacg.cc/",
-          "description": "量子ACG是一个以游戏为主，进而推动日语学习的网站",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796982884.jpeg",
-          "enabled": true
-        },
-        {
-          "id": "site_1756797015802_8nr6dxm9c",
-          "title": "ACG盒子",
-          "href": "https://www.acgbox.link/dongmanzhuanqu",
-          "description": "ACG盒子，ACG二次元导航网站，收录ACG二次元相关的网站，打造一个ACG二次元专属的网站。",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796997700.png",
-          "enabled": true
-        },
-        {
-          "id": "site_1756801065152_rqkixuqwl",
-          "title": "VCB-Studio",
-          "href": "https://vcb-s.com/",
-          "description": "大家一起实现的故事！",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756801050749.png",
-          "enabled": true
-        },
-        {
-          "id": "site_1756898943421_tio7b7nd3",
-          "title": "Mikan Project",
-          "href": "https://mikanani.me/",
-          "description": "蜜柑计划：新一代的动漫下载站",
-          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898904780.ico",
-          "enabled": true
-        }
-      ],
-      "subCategories": []
-    },
-    {
       "id": "1756888738654",
       "title": "资源",
       "icon": "FolderOpen",
@@ -256,6 +174,88 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1756796781483",
+      "title": "ACG",
+      "icon": "Box",
+      "description": "",
+      "enabled": true,
+      "items": [
+        {
+          "id": "site_1756796833879_iccc1z03s",
+          "title": "维咔VikACG",
+          "href": "https://www.vikacg.com/",
+          "description": "维咔VikACG由VikACG Pte. Ltd.运营，致力于各类动漫资源分享以及漫友交流，我们的Slogan是：肥宅们的欢乐家园。",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756797548650.ico",
+          "enabled": true
+        },
+        {
+          "id": "site_1756796854432_c5jwsl5m9",
+          "title": "真红小站",
+          "href": "https://www.shinnku.com/",
+          "description": "这里是真红小站（失落小站）, 一个galgame资源站, (包括visual novel, 黄油, psp, krkr, ons gal资源 等), 收录了大部分的汉化galgame, 大部分的生肉galgame资源。",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796840322.ico",
+          "enabled": true
+        },
+        {
+          "id": "site_1756796869403_do2otk61d",
+          "title": "绮梦ACG",
+          "href": "https://game.acgs.one/",
+          "description": "专注分享次元世界-Galgame",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796857675.png",
+          "enabled": true
+        },
+        {
+          "id": "site_1756796940816_recnyxia3",
+          "title": "青桔网",
+          "href": "https://spare.qingju.org/",
+          "description": "由青桔移植组建立的非盈利型galgame免费分享平台",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796923154.png",
+          "enabled": true
+        },
+        {
+          "id": "site_1756796972348_qixtvxhnn",
+          "title": "梓澪の妙妙屋",
+          "href": "https://zi0.cc/",
+          "description": "免费Galgame仓库&下载站",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796946439.png",
+          "enabled": true
+        },
+        {
+          "id": "site_1756796994257_xmv02ajvv",
+          "title": "量子ACG",
+          "href": "https://lzacg.cc/",
+          "description": "量子ACG是一个以游戏为主，进而推动日语学习的网站",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796982884.jpeg",
+          "enabled": true
+        },
+        {
+          "id": "site_1756797015802_8nr6dxm9c",
+          "title": "ACG盒子",
+          "href": "https://www.acgbox.link/dongmanzhuanqu",
+          "description": "ACG盒子，ACG二次元导航网站，收录ACG二次元相关的网站，打造一个ACG二次元专属的网站。",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756796997700.png",
+          "enabled": true
+        },
+        {
+          "id": "site_1756801065152_rqkixuqwl",
+          "title": "VCB-Studio",
+          "href": "https://vcb-s.com/",
+          "description": "大家一起实现的故事！",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756801050749.png",
+          "enabled": true
+        },
+        {
+          "id": "site_1756898943421_tio7b7nd3",
+          "title": "Mikan Project",
+          "href": "https://mikanani.me/",
+          "description": "蜜柑计划：新一代的动漫下载站",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898904780.ico",
+          "enabled": true
+        }
+      ],
+      "subCategories": []
     },
     {
       "id": "9",
