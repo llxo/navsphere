@@ -226,7 +226,7 @@
               "title": "Nexus Mods",
               "href": "https://www.nexusmods.com/",
               "description": "mod下载站",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756888796857.png",
+              "icon": "https://www.nexusmods.com/favicon.ico",
               "enabled": true
             },
             {
