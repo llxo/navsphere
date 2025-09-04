@@ -166,6 +166,47 @@
           ]
         },
         {
+          "id": "d59b603b-a35a-415c-995d-6e318ed8d775",
+          "title": "游戏",
+          "icon": "Home",
+          "description": "",
+          "enabled": true,
+          "items": [
+            {
+              "id": "site_1756888810023_8a67wy89j",
+              "title": "Nexus Mods",
+              "href": "https://www.nexusmods.com/",
+              "description": "mod下载站",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756888796857.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1756898372814_5umijc0l2",
+              "title": "BYRUTOR",
+              "href": "https://byrutgame.org/",
+              "description": "Последние (полные) версии ПК игр со всеми обновлениями и дополнениями, с ежедневной публикацией новинок игр",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898340296.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1756898568753_qsncco4hs",
+              "title": "flysheep资源避难所",
+              "href": "https://www.flysheep6.com/",
+              "description": "一个免费的二次元风格下载站 收录steam epic 单机资源 switch游戏",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898536156.png",
+              "enabled": true
+            },
+            {
+              "id": "site_1756898530898_sej9ngwpt",
+              "title": "Koyso",
+              "href": "https://koyso.com/",
+              "description": "",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898506653.ico",
+              "enabled": true
+            }
+          ]
+        },
+        {
           "id": "29159e9c-2c21-4658-8e36-c53c3513eb8a",
           "title": "影视",
           "icon": "Video",
@@ -210,47 +251,6 @@
               "href": "https://pansou.jkai.de/",
               "description": "盘搜是一个强大的网盘搜索工具，聚合来自Telegram频道的海量资源，支持115、百度云、阿里云盘等主流网盘。快速、精准地找到您需要的电影、音乐、游戏、学习资料等。",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756960749217.png",
-              "enabled": true
-            }
-          ]
-        },
-        {
-          "id": "d59b603b-a35a-415c-995d-6e318ed8d775",
-          "title": "游戏",
-          "icon": "Home",
-          "description": "",
-          "enabled": true,
-          "items": [
-            {
-              "id": "site_1756888810023_8a67wy89j",
-              "title": "Nexus Mods",
-              "href": "https://www.nexusmods.com/",
-              "description": "mod下载站",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756888796857.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1756898372814_5umijc0l2",
-              "title": "BYRUTOR",
-              "href": "https://byrutgame.org/",
-              "description": "Последние (полные) версии ПК игр со всеми обновлениями и дополнениями, с ежедневной публикацией новинок игр",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898340296.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1756898568753_qsncco4hs",
-              "title": "flysheep资源避难所",
-              "href": "https://www.flysheep6.com/",
-              "description": "一个免费的二次元风格下载站 收录steam epic 单机资源 switch游戏",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898536156.png",
-              "enabled": true
-            },
-            {
-              "id": "site_1756898530898_sej9ngwpt",
-              "title": "Koyso",
-              "href": "https://koyso.com/",
-              "description": "",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756898506653.ico",
               "enabled": true
             }
           ]
