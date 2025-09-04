@@ -236,6 +236,14 @@
               "description": "",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756960734245.ico",
               "enabled": true
+            },
+            {
+              "id": "site_1756960771824_v8eppy16p",
+              "title": "盘搜",
+              "href": "https://pansou.jkai.de/",
+              "description": "盘搜是一个强大的网盘搜索工具，聚合来自Telegram频道的海量资源，支持115、百度云、阿里云盘等主流网盘。快速、精准地找到您需要的电影、音乐、游戏、学习资料等。",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756960749217.png",
+              "enabled": true
             }
           ]
         }
