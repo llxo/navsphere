@@ -36,6 +36,14 @@
           "description": "这里是我的博客，分享技术和推荐工具",
           "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/img_1756881269536.png",
           "enabled": true
+        },
+        {
+          "id": "site_1757324193444_m3qd8r6kv",
+          "title": "GitHub",
+          "href": "https://github.com",
+          "description": "Join the world&#39;s most widely adopted, AI-powered developer platform where millions of developers, businesses, and the largest open source community build software that advances humanity.",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1757324180253.png",
+          "enabled": true
         }
       ],
       "subCategories": [],
