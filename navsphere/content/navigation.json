@@ -221,6 +221,14 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "3e0a1ed2-2387-4963-887a-8e97224ba6cf",
+          "title": "其他",
+          "icon": "Files",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
