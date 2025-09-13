@@ -64,7 +64,16 @@
       "icon": "FolderOpen",
       "description": "",
       "enabled": true,
-      "items": [],
+      "items": [
+        {
+          "id": "site_1757767764065_mxvh3euir",
+          "title": "Free .edu Email",
+          "href": "https://edumail.su/",
+          "description": "免费临时教育邮箱",
+          "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1757767710559.png",
+          "enabled": true
+        }
+      ],
       "subCategories": [
         {
           "id": "52a68917-2c8e-4147-8133-c7879044e5b6",
