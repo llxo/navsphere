@@ -458,6 +458,14 @@
               "description": "实时监控境内 Docker 镜像加速器状态，提供准确的可用性检测和响应时间数据，帮助开发者选择最佳的 Docker 镜像源，提升容器镜像拉取速度。",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1757087998391.png",
               "enabled": true
+            },
+            {
+              "id": "site_1758892566755_7ponu0lzv",
+              "title": "无损音乐",
+              "href": "https://dab.yeet.su/",
+              "description": "歌不全",
+              "icon": "https://www.google.com/s2/favicons?sz=128&domain=dab.yeet.su",
+              "enabled": true
             }
           ],
           "enabled": true
