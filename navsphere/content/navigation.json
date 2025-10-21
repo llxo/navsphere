@@ -321,7 +321,16 @@
       "description": "",
       "enabled": true,
       "items": [],
-      "subCategories": []
+      "subCategories": [
+        {
+          "id": "0a7079b5-55fc-4dac-9db5-20420e5b080a",
+          "title": "Windows",
+          "icon": "Box",
+          "description": "",
+          "enabled": true,
+          "items": []
+        }
+      ]
     },
     {
       "id": "9",
