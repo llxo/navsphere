@@ -665,6 +665,15 @@
           ]
         }
       ]
+    },
+    {
+      "id": "1761023321528",
+      "title": "破解资源",
+      "icon": "Target",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
     }
   ]
 }
