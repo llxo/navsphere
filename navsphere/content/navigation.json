@@ -315,6 +315,15 @@
       "subCategories": []
     },
     {
+      "id": "1761023321528",
+      "title": "破解资源",
+      "icon": "Target",
+      "description": "",
+      "enabled": true,
+      "items": [],
+      "subCategories": []
+    },
+    {
       "id": "9",
       "title": "AI工具包",
       "icon": "Brain",
@@ -665,15 +674,6 @@
           ]
         }
       ]
-    },
-    {
-      "id": "1761023321528",
-      "title": "破解资源",
-      "icon": "Target",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": []
     }
   ]
 }
