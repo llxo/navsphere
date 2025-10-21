@@ -353,7 +353,16 @@
           "icon": "Box",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1761023544668_tx6x1npz4",
+              "title": "MacWk - 精品mac软件下载",
+              "href": "https://macwk.cn/",
+              "description": "MAC应用软件,每天更新大量精品mac软件,为您提供优质的mac软件,mac破解版软件下载",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023527962.png",
+              "enabled": true
+            }
+          ]
         }
       ]
     },
