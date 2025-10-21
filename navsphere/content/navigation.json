@@ -336,6 +336,14 @@
               "description": "",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023434456.ico",
               "enabled": true
+            },
+            {
+              "id": "site_1761023487692_fpz1jujty",
+              "title": "OSSSR.COM",
+              "href": "https://www.osssr.com/",
+              "description": "OSSSR.COM - 软件资源下载站，我们提供最新、最全的便携软件、绿色软件和正版软件，让您轻松获取最适合您的工具。无论是办公、设计、开发、娱乐，我们都为您精选了高质量、安全无毒的软件资源。",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023475932.png",
+              "enabled": true
             }
           ]
         },
