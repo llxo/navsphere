@@ -369,6 +369,14 @@
               "description": "macked每天更新大量精品mac软件,为您提供优质的mac软件,mac破解版软件下载,以及各种实用的Mac技巧教程,致力于打造从软件到服务都是一流的Mac软件资源网站。",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023550698.png",
               "enabled": true
+            },
+            {
+              "id": "site_1761023580204_szj361w40",
+              "title": "XMac.App",
+              "href": "https://xmac.app/",
+              "description": "Download crack app for mac with full speed just one step...",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023568338.png",
+              "enabled": true
             }
           ]
         }
