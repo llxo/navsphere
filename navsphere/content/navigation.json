@@ -328,7 +328,16 @@
           "icon": "Box",
           "description": "",
           "enabled": true,
-          "items": []
+          "items": [
+            {
+              "id": "site_1761023458338_t9y4jv40g",
+              "title": "亿破姐",
+              "href": "https://www.ypojie.com/pc/page/1",
+              "description": "",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023434456.ico",
+              "enabled": true
+            }
+          ]
         },
         {
           "id": "245c5dae-8a62-43e6-aaa4-2a9e1d4ab806",
