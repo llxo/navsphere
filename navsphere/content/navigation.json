@@ -329,6 +329,14 @@
           "description": "",
           "enabled": true,
           "items": []
+        },
+        {
+          "id": "245c5dae-8a62-43e6-aaa4-2a9e1d4ab806",
+          "title": "MacOS",
+          "icon": "Box",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
