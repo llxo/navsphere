@@ -165,6 +165,14 @@
           ]
         },
         {
+          "id": "c36bc58d-31e5-4bc8-b0bb-1a8d66f0a011",
+          "title": "Mac",
+          "icon": "Box",
+          "description": "",
+          "enabled": true,
+          "items": []
+        },
+        {
           "id": "d59b603b-a35a-415c-995d-6e318ed8d775",
           "title": "游戏",
           "icon": "Home",
@@ -229,14 +237,6 @@
               "enabled": true
             }
           ]
-        },
-        {
-          "id": "c36bc58d-31e5-4bc8-b0bb-1a8d66f0a011",
-          "title": "Mac",
-          "icon": "Box",
-          "description": "",
-          "enabled": true,
-          "items": []
         }
       ]
     },
