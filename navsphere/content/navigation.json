@@ -539,6 +539,14 @@
               "description": "网络面板(NetworkPanel)是一个在线流量消耗器，可以测试您的网速，监测您的网络环境，提供丰富测试节点，并且长期维护更新",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761199632370.png",
               "enabled": true
+            },
+            {
+              "id": "site_1761199837522_frj8gxub8",
+              "title": "NB 优选服务",
+              "href": "https://www.byoip.top/",
+              "description": "NB 优选服务是一个致力于为开发者和网站运营者提供全球主流云服务商的 CDN 节点优选和节点状态监测服务的开源项目。我们的目标是帮助用户获得更快、更稳定的网络体验。",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761199751371.png",
+              "enabled": true
             }
           ],
           "enabled": true
