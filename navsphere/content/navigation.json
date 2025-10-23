@@ -229,6 +229,14 @@
               "enabled": true
             }
           ]
+        },
+        {
+          "id": "c36bc58d-31e5-4bc8-b0bb-1a8d66f0a011",
+          "title": "Mac",
+          "icon": "Box",
+          "description": "",
+          "enabled": true,
+          "items": []
         }
       ]
     },
