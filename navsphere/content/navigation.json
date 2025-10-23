@@ -480,32 +480,6 @@
       "enabled": true
     },
     {
-      "id": "1761023321528",
-      "title": "破解资源",
-      "icon": "Target",
-      "description": "",
-      "enabled": true,
-      "items": [],
-      "subCategories": [
-        {
-          "id": "0a7079b5-55fc-4dac-9db5-20420e5b080a",
-          "title": "Windows",
-          "icon": "Box",
-          "description": "",
-          "enabled": true,
-          "items": []
-        },
-        {
-          "id": "245c5dae-8a62-43e6-aaa4-2a9e1d4ab806",
-          "title": "MacOS",
-          "icon": "Box",
-          "description": "",
-          "enabled": true,
-          "items": []
-        }
-      ]
-    },
-    {
       "id": "2",
       "title": "常用工具",
       "icon": "Laptop",
