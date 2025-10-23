@@ -1,0 +1,1312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Mods 跳转器</title>
+    
+    <!-- 网页图标 -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%23667eea'/><stop offset='100%25' style='stop-color:%23764ba2'/></linearGradient></defs><circle cx='32' cy='32' r='30' fill='url(%23grad1)'/><path d='M24 18 L24 46 L20 46 L20 18 Z M24 18 L40 18 L40 22 L24 22 Z M20 42 L32 42 Q40 42 40 34 Q40 26 32 26 L28 26 L28 30 L32 30 Q36 30 36 34 Q36 38 32 38 L20 38 Z' fill='white'/></svg>" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'><stop offset='0%25' style='stop-color:%23667eea'/><stop offset='100%25' style='stop-color:%23764ba2'/></linearGradient></defs><circle cx='32' cy='32' r='30' fill='url(%23grad1)'/><path d='M24 18 L24 46 L20 46 L20 18 Z M24 18 L40 18 L40 22 L24 22 Z M20 42 L32 42 Q40 42 40 34 Q40 26 32 26 L28 26 L28 30 L32 30 Q36 30 36 34 Q36 38 32 38 L20 38 Z' fill='white'/></svg>">
+    <meta name="theme-color" content="#667eea">
+    
+    <script src="translations.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Microsoft YaHei', 'Segoe UI', Tahoma, Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+            transform: translateY(-80px);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .container:hover {
+            transform: translateY(-85px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: titleGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes titleGlow {
+            0% {
+                filter: brightness(1);
+            }
+
+            100% {
+                filter: brightness(1.2);
+            }
+        }
+
+        .input-group {
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid transparent;
+            border-radius: 12px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border: 2px solid #667eea;
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        #search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            max-height: 200px;
+            overflow-y: auto;
+            border-radius: 12px;
+            margin-top: 8px;
+            display: none;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: slideIn 0.3s ease-out;
+            z-index: 1000;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .game-item {
+            padding: 12px 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .game-item:last-child {
+            border-bottom: none;
+        }
+
+        .game-item:hover {
+            background: linear-gradient(90deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            transform: translateX(5px);
+        }
+
+        .game-item.recent-game {
+            opacity: 0.9;
+        }
+
+        .game-item.recent-game:hover {
+            opacity: 1;
+            background: linear-gradient(90deg, rgba(102, 126, 234, 0.08), rgba(118, 75, 162, 0.08));
+        }
+
+        .recent-games-header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 10;
+        }
+
+        button {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 18px 30px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        button:hover::before {
+            left: 100%;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
+            background: linear-gradient(45deg, #5a6fd8, #6a4c93);
+        }
+
+        button:active {
+            transform: translateY(-1px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 滚动条样式 */
+        #search-results::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        #search-results::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+        }
+
+        #search-results::-webkit-scrollbar-thumb {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 3px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            input[type="text"] {
+                padding: 12px 16px;
+                font-size: 14px;
+            }
+
+            button {
+                padding: 15px 25px;
+                font-size: 16px;
+            }
+
+            /* 手机端按钮组调整 */
+            div[style*="top: 20px; left: 20px"] {
+                top: 15px !important;
+                left: 15px !important;
+            }
+
+            div[style*="top: 20px; right: 20px"] {
+                top: 15px !important;
+                right: 15px !important;
+                gap: 10px !important;
+            }
+
+            #github-icon,
+            #refresh-icon,
+            #clear-history-icon {
+                width: 45px !important;
+                height: 45px !important;
+            }
+
+            #github-icon svg {
+                width: 20px !important;
+                height: 20px !important;
+            }
+
+            #refresh-icon span,
+            #clear-history-icon span {
+                font-size: 18px !important;
+            }
+
+            /* 模态框移动端适配 */
+            .modal-content {
+                margin: 10% auto;
+                padding: 20px;
+                width: 95%;
+                max-width: none;
+            }
+
+            .modal-title {
+                font-size: 1.5em;
+            }
+
+            .modal-footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .modal-button {
+                width: 100%;
+            }
+
+            .form-input {
+                padding: 12px 16px;
+                font-size: 16px;
+                /* 防止iOS自动缩放 */
+            }
+
+            .help-text {
+                font-size: 13px;
+            }
+        }
+
+        /* 加载动画 */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255, 255, 255, .3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* 网页右上角刷新图标样式 */
+        #refresh-icon {
+            opacity: 0;
+            animation: fadeInIcon 1s ease-out 2s forwards;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes fadeInIcon {
+            to {
+                opacity: 1;
+            }
+        }
+
+        #refresh-icon:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        #refresh-icon:hover span {
+            transform: rotate(180deg);
+        }
+
+        #refresh-icon.refreshing span {
+            animation: spin 1s linear infinite;
+        }
+
+        #refresh-icon.disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        /* 刷新图标的脉冲效果 */
+        #refresh-icon::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 50%;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            animation: pulse 2s infinite;
+            opacity: 0;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.2);
+                opacity: 0;
+            }
+        }
+
+        /* GitHub图标样式 */
+        #github-icon:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        #github-icon:hover svg {
+            transform: rotate(5deg) scale(1.1);
+        }
+
+        /* GitHub图标的脉冲效果 */
+        #github-icon::before {
+            content: '';
+            position: absolute;
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border-radius: 50%;
+            border: 2px solid rgba(102, 126, 234, 0.3);
+            animation: pulse 2s infinite;
+            opacity: 0;
+        }
+
+        /* 清除历史按钮样式 */
+        #clear-history-icon {
+            opacity: 0;
+            animation: fadeInIcon 1s ease-out 2s forwards;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        #clear-history-icon:hover {
+            transform: scale(1.15);
+            box-shadow: 0 8px 30px rgba(102, 126, 234, 0.5);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        #clear-history-icon:hover span {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- 网页左上角GitHub图标 -->
+    <div style="position: fixed; top: 20px; left: 20px; z-index: 1000;">
+        <div id="github-icon"
+            style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(45deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 6px 25px rgba(102,126,234,0.4); backdrop-filter: blur(10px); opacity: 0; animation: fadeInIcon 1s ease-out 2s forwards; border: 2px solid rgba(255, 255, 255, 0.2);"
+            title="访问GitHub仓库">
+            <svg style="width: 24px; height: 24px; fill: white; transition: transform 0.3s ease;" viewBox="0 0 24 24">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- 网页右上角按钮组 -->
+    <div style="position: fixed; top: 20px; right: 20px; display: flex; gap: 15px; z-index: 1000;">
+        <!-- 清除历史按钮 -->
+        <div id="clear-history-icon"
+            style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(45deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 6px 25px rgba(102,126,234,0.4); backdrop-filter: blur(10px);"
+            title="清除搜索历史记录">
+            <span style="color: white; font-size: 20px; transition: transform 0.3s ease;">🗑️</span>
+        </div>
+
+        <!-- 刷新按钮 -->
+        <div id="refresh-icon"
+            style="width: 50px; height: 50px; border-radius: 50%; background: linear-gradient(45deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all 0.3s ease; box-shadow: 0 6px 25px rgba(102,126,234,0.4); backdrop-filter: blur(10px);"
+            title="强制刷新游戏列表缓存（清除本地缓存并重新加载）">
+            <span style="color: white; font-size: 20px; transition: transform 0.3s ease;">🔄</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Nexus Mods 跳转器</h1>
+
+        <div class="input-group">
+            <label for="game-search">游戏名称：</label>
+            <input type="text" id="game-search" placeholder="正在加载游戏列表..." autocomplete="off" disabled>
+            <div id="search-results"></div>
+            <div id="loading-indicator" style="text-align: center; margin-top: 10px; color: #667eea;">
+                <span class="loading"></span> 正在从 Nexus Mods API 加载游戏列表...
+            </div>
+        </div>
+
+        <div class="input-group">
+            <label for="mod-id">Mod ID：</label>
+            <input type="text" id="mod-id" placeholder="输入Mod ID（数字）">
+        </div>
+
+        <button id="go-button">跳转到Mod页面</button>
+    </div>
+
+
+
+    <script>
+        // 游戏数据 - 将从后端API动态加载
+        let games = [];
+
+        // 游戏映射表和备用游戏列表已移至 game-translations.js 文件中
+
+        // 缓存配置
+        const CACHE_CONFIG = {
+            GAMES_CACHE_KEY: 'nexus_games_cache',
+            CACHE_DURATION: 24 * 60 * 60 * 1000, // 24小时缓存时间（毫秒）
+            CACHE_VERSION: '1.0' // 缓存版本，用于强制更新
+        };
+
+        // 历史记录配置
+        const HISTORY_CONFIG = {
+            RECENT_GAMES_KEY: 'nexus_recent_games',
+            MAX_RECENT_GAMES: 10 // 最大保存10个最近选中的游戏
+        };
+
+        // 最近游戏历史管理
+        function getRecentGames() {
+            try {
+                const recentGamesData = localStorage.getItem(HISTORY_CONFIG.RECENT_GAMES_KEY);
+                return recentGamesData ? JSON.parse(recentGamesData) : [];
+            } catch (error) {
+                return [];
+            }
+        }
+
+        function addRecentGame(game) {
+            try {
+                let recentGames = getRecentGames();
+
+                // 移除已存在的相同游戏（避免重复）
+                recentGames = recentGames.filter(g => g.slug !== game.slug);
+
+                // 添加到开头
+                recentGames.unshift({
+                    name: game.name,
+                    chinese: game.chinese,
+                    slug: game.slug,
+                    downloads: game.downloads,
+                    files: game.files,
+                    timestamp: new Date().getTime()
+                });
+
+                // 限制最大数量
+                if (recentGames.length > HISTORY_CONFIG.MAX_RECENT_GAMES) {
+                    recentGames = recentGames.slice(0, HISTORY_CONFIG.MAX_RECENT_GAMES);
+                }
+
+                localStorage.setItem(HISTORY_CONFIG.RECENT_GAMES_KEY, JSON.stringify(recentGames));
+                return true;
+            } catch (error) {
+                return false;
+            }
+        }
+
+        function clearRecentGames() {
+            try {
+                localStorage.removeItem(HISTORY_CONFIG.RECENT_GAMES_KEY);
+                return true;
+            } catch (error) {
+                return false;
+            }
+        }
+
+        // 检查缓存是否有效
+        function isCacheValid() {
+            try {
+                const cachedData = localStorage.getItem(CACHE_CONFIG.GAMES_CACHE_KEY);
+                if (!cachedData) return false;
+
+                const cache = JSON.parse(cachedData);
+
+                // 检查缓存版本
+                if (cache.version !== CACHE_CONFIG.CACHE_VERSION) {
+                    return false;
+                }
+
+                // 检查缓存时间
+                const now = new Date().getTime();
+                const cacheAge = now - cache.timestamp;
+
+                if (cacheAge > CACHE_CONFIG.CACHE_DURATION) {
+                    return false;
+                }
+
+                return true;
+            } catch (error) {
+                return false;
+            }
+        }
+
+        // 从缓存加载游戏列表
+        function loadGamesFromCache() {
+            try {
+                const cachedData = localStorage.getItem(CACHE_CONFIG.GAMES_CACHE_KEY);
+                if (!cachedData) return null;
+
+                const cache = JSON.parse(cachedData);
+                return cache.games;
+            } catch (error) {
+                return null;
+            }
+        }
+
+        // 保存游戏列表到缓存
+        function saveGamesToCache(gamesList) {
+            try {
+                const cacheData = {
+                    games: gamesList,
+                    timestamp: new Date().getTime(),
+                    version: CACHE_CONFIG.CACHE_VERSION
+                };
+
+                localStorage.setItem(CACHE_CONFIG.GAMES_CACHE_KEY, JSON.stringify(cacheData));
+            } catch (error) {
+                // 静默处理缓存保存失败
+            }
+        }
+
+        // 清除游戏列表缓存
+        function clearGamesCache() {
+            try {
+                localStorage.removeItem(CACHE_CONFIG.GAMES_CACHE_KEY);
+            } catch (error) {
+                // 静默处理缓存清除失败
+            }
+        }
+
+        // 从后端API获取游戏列表（带缓存功能）
+        async function fetchGamesFromAPI(forceRefresh = false) {
+            const gameSearchInput = document.getElementById('game-search');
+            const loadingIndicator = document.getElementById('loading-indicator');
+
+            // 检查是否需要强制刷新或缓存无效
+            if (!forceRefresh && isCacheValid()) {
+                const cachedGames = loadGamesFromCache();
+
+                if (cachedGames && cachedGames.length > 0) {
+                    // 对缓存的游戏重新应用翻译（以防翻译表更新）
+                    games = cachedGames.map(game => ({
+                        ...game,
+                        chinese: gameTranslations[game.name] || game.chinese || game.name
+                    }));
+
+                    // 缓存加载成功
+                    gameSearchInput.disabled = false;
+                    gameSearchInput.placeholder = '输入游戏中文名或英文名...';
+                    if (loadingIndicator) {
+                        loadingIndicator.style.display = 'none';
+                    }
+
+                    // 显示刷新图标
+                    const refreshIcon = document.getElementById('refresh-icon');
+                    if (refreshIcon) {
+                        refreshIcon.style.opacity = '1';
+                    }
+
+                    showNotification(`已从缓存加载 ${games.length} 个游戏 💾`, 'info');
+                    return;
+                }
+            }
+
+            try {
+                showNotification(forceRefresh ? '正在刷新游戏列表...' : '正在加载游戏列表...', 'info');
+
+                let response;
+                
+                try {
+                    // 首先尝试主要的 Netlify Functions API
+                    response = await fetch('/.netlify/functions/games', {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                } catch (mainApiError) {
+                    console.warn('主 API 失败，尝试备用 API:', mainApiError);
+                    // 如果主 API 失败，尝试备用 API
+                    response = await fetch('/.netlify/functions/games-backup', {
+                        method: 'GET',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    });
+                }
+
+                if (!response.ok) {
+                    const errorData = await response.json();
+                    throw new Error(errorData.error || `HTTP ${response.status}: ${response.statusText}`);
+                }
+
+                const apiGames = await response.json();
+
+                // 转换API返回的数据格式为我们需要的格式，并添加中文翻译
+                games = apiGames.map(game => {
+                    // 查找中文翻译，如果没有则使用英文名
+                    const chineseName = gameTranslations[game.name] || game.name;
+
+                    return {
+                        name: game.name,
+                        chinese: chineseName,
+                        slug: game.domain_name,
+                        categories: game.categories || 0,
+                        downloads: game.downloads || 0,
+                        files: game.file_count || 0
+                    };
+                });
+
+                // 按下载量排序，热门游戏在前
+                games.sort((a, b) => b.downloads - a.downloads);
+
+                // 保存到缓存
+                saveGamesToCache(games);
+
+                showNotification(`成功加载 ${games.length} 个游戏 🔄`, 'success');
+
+            } catch (error) {
+                console.error('加载游戏列表失败:', error);
+                
+                // API加载失败，尝试从缓存加载（即使过期）
+                const cachedGames = loadGamesFromCache();
+                if (cachedGames && cachedGames.length > 0) {
+                    // 对缓存的游戏重新应用翻译（以防翻译表更新）
+                    games = cachedGames.map(game => ({
+                        ...game,
+                        chinese: gameTranslations[game.name] || game.chinese || game.name
+                    }));
+                    showNotification('连接服务器失败，使用缓存数据', 'warning');
+                } else {
+                    // 缓存也没有，使用备用游戏列表
+                    games = fallbackGames.map(game => ({
+                        ...game,
+                        chinese: gameTranslations[game.name] || game.chinese || game.name
+                    }));
+                    showNotification('连接服务器失败，使用备用游戏列表', 'warning');
+                }
+            } finally {
+                // 无论成功还是失败，都要启用搜索框并隐藏加载指示器
+                gameSearchInput.disabled = false;
+                gameSearchInput.placeholder = '输入游戏中文名或英文名...';
+                if (loadingIndicator) {
+                    loadingIndicator.style.display = 'none';
+                }
+
+                // 显示并启用刷新图标
+                const refreshIcon = document.getElementById('refresh-icon');
+                if (refreshIcon) {
+                    refreshIcon.style.opacity = '1';
+                    refreshIcon.classList.remove('refreshing', 'disabled');
+                }
+            }
+        }
+
+
+
+        // DOM 元素
+        const gameSearchInput = document.getElementById('game-search');
+        const searchResults = document.getElementById('search-results');
+        const modIdInput = document.getElementById('mod-id');
+        const goButton = document.getElementById('go-button');
+
+        let selectedGame = null;
+
+        // 显示最近游戏历史
+        function showRecentGames() {
+            const recentGames = getRecentGames();
+
+            if (recentGames.length === 0) {
+                searchResults.style.display = 'none';
+                return;
+            }
+
+            searchResults.innerHTML = '';
+
+            recentGames.forEach(game => {
+                const div = document.createElement('div');
+                div.className = 'game-item recent-game';
+                div.style.paddingLeft = '25px'; // 稍微缩进表示这是历史记录
+
+                const gameInfo = document.createElement('div');
+                gameInfo.style.cssText = 'display: flex; justify-content: space-between; align-items: center;';
+
+                const nameDiv = document.createElement('div');
+                const displayName = game.chinese === game.name ? game.name : game.chinese;
+                nameDiv.innerHTML = `<span style="color: #888;">🕒</span> ${displayName}`;
+                nameDiv.style.fontWeight = '500';
+
+                const statsDiv = document.createElement('div');
+                statsDiv.style.cssText = 'font-size: 12px; color: #888; text-align: right;';
+
+                if (game.downloads || game.files) {
+                    const parts = [];
+                    if (game.downloads) parts.push(`📥 ${formatNumber(game.downloads)}`);
+                    if (game.files) parts.push(`📄 ${formatNumber(game.files)}`);
+                    statsDiv.textContent = parts.join(' | ');
+                }
+
+                gameInfo.appendChild(nameDiv);
+                if (statsDiv.textContent) gameInfo.appendChild(statsDiv);
+
+                div.appendChild(gameInfo);
+
+                div.addEventListener('click', function () {
+                    selectedGame = game;
+                    const displayName = game.chinese === game.name ? game.name : game.chinese;
+                    gameSearchInput.value = displayName;
+                    searchResults.style.display = 'none';
+
+                    // 更新按钮文本
+                    if (modIdInput.value.trim()) {
+                        goButton.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+                        goButton.textContent = `跳转到 ${displayName}`;
+                    }
+                });
+
+                searchResults.appendChild(div);
+            });
+
+            searchResults.style.display = 'block';
+        }
+
+        // 搜索框点击事件 - 清空搜索框并显示最近游戏
+        gameSearchInput.addEventListener('focus', function () {
+            // 清空搜索框
+            this.value = '';
+            // 清空当前选中的游戏
+            selectedGame = null;
+            // 重置按钮状态
+            goButton.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
+            goButton.textContent = '跳转到Mod页面';
+            // 显示最近游戏
+            showRecentGames();
+        });
+
+        // 高级搜索功能 - 支持中英文模糊匹配
+        gameSearchInput.addEventListener('input', function () {
+            const searchTerm = this.value.toLowerCase().trim();
+
+            if (searchTerm.length < 1) {
+                showRecentGames(); // 当搜索框为空时显示最近游戏
+                return;
+            }
+
+
+
+            // 筛选匹配的游戏 - 多种匹配策略
+            const matchedGames = games.filter(game => {
+                const englishName = game.name.toLowerCase();
+                const chineseName = game.chinese.toLowerCase();
+
+                // 1. 直接包含匹配（中英文）
+                if (englishName.includes(searchTerm) || chineseName.includes(searchTerm)) {
+                    return true;
+                }
+
+                // 2. 去除特殊字符后匹配
+                const cleanEnglish = englishName.replace(/[:\-\s]/g, '');
+                const cleanChinese = chineseName.replace(/[：\-\s]/g, '');
+                const cleanSearch = searchTerm.replace(/[:\-\s]/g, '');
+
+                if (cleanEnglish.includes(cleanSearch) || cleanChinese.includes(cleanSearch)) {
+                    return true;
+                }
+
+                // 3. 单词匹配（英文）
+                const englishWords = englishName.split(/[\s\-:]/);
+                const searchWords = searchTerm.split(/[\s\-:]/);
+
+                for (const searchWord of searchWords) {
+                    if (searchWord.length >= 2) { // 忽略太短的词
+                        for (const englishWord of englishWords) {
+                            if (englishWord.toLowerCase().startsWith(searchWord)) {
+                                return true;
+                            }
+                        }
+                    }
+                }
+
+                // 4. 缩写匹配（如gta匹配Grand Theft Auto）
+                if (searchTerm.length >= 2) {
+                    const englishInitials = englishName.match(/\b\w/g);
+                    if (englishInitials && englishInitials.join('').toLowerCase().includes(searchTerm)) {
+                        return true;
+                    }
+                }
+
+                return false;
+            });
+
+            // 显示搜索结果 - 优化的中英文显示
+            if (matchedGames.length > 0) {
+                searchResults.innerHTML = '';
+
+                // 按相关性排序：优先显示更匹配的结果
+                matchedGames.sort((a, b) => {
+                    const aScore = getMatchScore(a, searchTerm);
+                    const bScore = getMatchScore(b, searchTerm);
+                    if (aScore !== bScore) return bScore - aScore; // 高分在前
+                    return (b.downloads || 0) - (a.downloads || 0); // 下载量高的在前
+                });
+
+                matchedGames.slice(0, 20).forEach(game => { // 限制显示前20个结果
+                    const div = document.createElement('div');
+                    div.className = 'game-item';
+
+                    // 创建游戏信息HTML
+                    const gameInfo = document.createElement('div');
+                    gameInfo.style.cssText = 'display: flex; justify-content: space-between; align-items: center;';
+
+                    const nameDiv = document.createElement('div');
+
+                    // 智能显示中英文名称
+                    let displayName;
+                    if (game.chinese === game.name) {
+                        // 没有中文译名，只显示英文名
+                        displayName = game.name;
+                    } else {
+                        // 有中文译名，只显示中文名
+                        displayName = game.chinese;
+                    }
+
+                    nameDiv.innerHTML = highlightMatch(displayName, searchTerm);
+                    nameDiv.style.fontWeight = '600';
+
+                    const statsDiv = document.createElement('div');
+                    statsDiv.style.cssText = 'font-size: 12px; color: #888; text-align: right;';
+
+                    if (game.downloads || game.files) {
+                        const parts = [];
+                        if (game.downloads) parts.push(`📥 ${formatNumber(game.downloads)}`);
+                        if (game.files) parts.push(`📄 ${formatNumber(game.files)}`);
+                        statsDiv.textContent = parts.join(' | ');
+                    }
+
+                    gameInfo.appendChild(nameDiv);
+                    if (statsDiv.textContent) gameInfo.appendChild(statsDiv);
+
+                    div.appendChild(gameInfo);
+
+                    div.addEventListener('click', function () {
+                        selectedGame = game;
+                        // 添加到最近游戏历史
+                        addRecentGame(game);
+
+                        // 选择后显示中文名（如果有的话）
+                        const displayName = game.chinese === game.name ? game.name : game.chinese;
+                        gameSearchInput.value = displayName;
+                        searchResults.style.display = 'none';
+
+                        // 更新按钮文本
+                        if (modIdInput.value.trim()) {
+                            goButton.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+                            goButton.textContent = `跳转到 ${game.chinese === game.name ? game.name : game.chinese}`;
+                        }
+                    });
+                    searchResults.appendChild(div);
+                });
+                searchResults.style.display = 'block';
+            } else {
+                // 没有找到匹配结果，显示最近游戏作为建议
+                const recentGames = getRecentGames();
+                if (recentGames.length > 0) {
+                    searchResults.innerHTML = '';
+
+                    // 添加"未找到"提示
+                    const noResultDiv = document.createElement('div');
+                    noResultDiv.style.cssText = 'padding: 15px 20px; color: #999; text-align: center; border-bottom: 1px solid rgba(0,0,0,0.05);';
+                    noResultDiv.innerHTML = '未找到匹配的游戏 😕<br><small>尝试使用英文名或中文名搜索</small>';
+                    searchResults.appendChild(noResultDiv);
+
+
+
+                    // 显示最近游戏（限制前5个）
+                    recentGames.slice(0, 5).forEach(game => {
+                        const div = document.createElement('div');
+                        div.className = 'game-item recent-game';
+                        div.style.paddingLeft = '25px';
+
+                        const gameInfo = document.createElement('div');
+                        gameInfo.style.cssText = 'display: flex; justify-content: space-between; align-items: center;';
+
+                        const nameDiv = document.createElement('div');
+                        const displayName = game.chinese === game.name ? game.name : game.chinese;
+                        nameDiv.innerHTML = `<span style="color: #888;">🕒</span> ${displayName}`;
+                        nameDiv.style.fontWeight = '500';
+
+                        gameInfo.appendChild(nameDiv);
+                        div.appendChild(gameInfo);
+
+                        div.addEventListener('click', function () {
+                            selectedGame = game;
+                            const displayName = game.chinese === game.name ? game.name : game.chinese;
+                            gameSearchInput.value = displayName;
+                            searchResults.style.display = 'none';
+
+                            if (modIdInput.value.trim()) {
+                                goButton.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+                                goButton.textContent = `跳转到 ${displayName}`;
+                            }
+                        });
+
+                        searchResults.appendChild(div);
+                    });
+
+                    searchResults.style.display = 'block';
+                } else {
+                    // 完全没有结果且没有历史记录
+                    searchResults.innerHTML = '<div class="game-item" style="color: #999; text-align: center; padding: 20px;">未找到匹配的游戏 😕<br><small>尝试使用英文名或中文名搜索</small></div>';
+                    searchResults.style.display = 'block';
+                }
+            }
+        });
+
+        // 计算匹配分数 - 用于搜索结果排序
+        function getMatchScore(game, searchTerm) {
+            const englishName = game.name.toLowerCase();
+            const chineseName = game.chinese.toLowerCase();
+            const search = searchTerm.toLowerCase();
+
+            let score = 0;
+
+            // 完全匹配得分最高
+            if (englishName === search || chineseName === search) score += 100;
+
+            // 开头匹配得分高
+            if (englishName.startsWith(search) || chineseName.startsWith(search)) score += 50;
+
+            // 包含匹配
+            if (englishName.includes(search) || chineseName.includes(search)) score += 30;
+
+            // 单词匹配
+            const englishWords = englishName.split(/[\s\-:]/);
+            for (const word of englishWords) {
+                if (word.startsWith(search)) score += 20;
+                if (word.includes(search)) score += 10;
+            }
+
+            return score;
+        }
+
+        // 高亮匹配文本
+        function highlightMatch(text, searchTerm) {
+            if (!searchTerm || searchTerm.length < 1) return text;
+
+            const regex = new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi');
+            return text.replace(regex, '<span style="background: rgba(102, 126, 234, 0.2); padding: 1px 3px; border-radius: 3px;">$1</span>');
+        }
+
+        // 格式化数字显示
+        function formatNumber(num) {
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(1) + 'M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toLocaleString();
+        }
+
+        // 点击其他地方关闭搜索结果
+        document.addEventListener('click', function (e) {
+            if (e.target !== gameSearchInput && e.target !== searchResults) {
+                searchResults.style.display = 'none';
+            }
+        });
+
+        // 跳转按钮
+        goButton.addEventListener('click', function () {
+            const modId = modIdInput.value.trim();
+
+            if (!selectedGame) {
+                showNotification('请先选择一个游戏', 'warning');
+                return;
+            }
+
+            if (!modId || isNaN(modId)) {
+                showNotification('请输入有效的Mod ID（数字）', 'warning');
+                return;
+            }
+
+            // 添加加载动画
+            const originalText = goButton.innerHTML;
+            goButton.innerHTML = '<span class="loading"></span> 跳转中...';
+            goButton.disabled = true;
+
+            // 模拟加载延迟，增加体验感
+            setTimeout(() => {
+                const url = `https://www.nexusmods.com/${selectedGame.slug}/mods/${modId}`;
+                window.open(url, '_blank');
+
+                // 重置按钮
+                goButton.innerHTML = originalText;
+                goButton.disabled = false;
+
+                showNotification('已在新标签页中打开Mod页面', 'success');
+            }, 800);
+        });
+
+        // 通知系统
+        function showNotification(message, type = 'info') {
+            // 创建通知元素
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.textContent = message;
+
+            // 添加样式
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                padding: 15px 25px;
+                border-radius: 12px;
+                color: white;
+                font-weight: 600;
+                z-index: 99999;
+                transform: translateX(400px);
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                backdrop-filter: blur(10px);
+            `;
+
+            // 根据类型设置颜色
+            switch (type) {
+                case 'success':
+                    notification.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+                    break;
+                case 'warning':
+                    notification.style.background = 'linear-gradient(45deg, #ff9800, #f57c00)';
+                    break;
+                case 'error':
+                    notification.style.background = 'linear-gradient(45deg, #f44336, #d32f2f)';
+                    break;
+                default:
+                    notification.style.background = 'linear-gradient(45deg, #2196F3, #1976D2)';
+            }
+
+            document.body.appendChild(notification);
+
+            // 动画显示
+            setTimeout(() => {
+                notification.style.transform = 'translateX(0)';
+            }, 100);
+
+            // 自动消失
+            setTimeout(() => {
+                notification.style.transform = 'translateX(400px)';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // 添加键盘快捷键支持
+        document.addEventListener('keydown', function (e) {
+            // Enter键快速跳转
+            if (e.key === 'Enter' && (e.target === modIdInput || e.target === gameSearchInput)) {
+                if (e.target === gameSearchInput && searchResults.style.display === 'block') {
+                    // 如果在搜索框中按回车且有搜索结果，选择第一个
+                    const firstItem = searchResults.querySelector('.game-item');
+                    if (firstItem) {
+                        firstItem.click();
+                    }
+                } else {
+                    goButton.click();
+                }
+            }
+
+            // Escape键关闭搜索结果
+            if (e.key === 'Escape') {
+                searchResults.style.display = 'none';
+            }
+        });
+
+        // 添加输入验证和实时反馈
+        modIdInput.addEventListener('input', function () {
+            const value = this.value.trim();
+
+            // 移除非数字字符
+            this.value = value.replace(/[^0-9]/g, '');
+
+            // 实时验证
+            if (this.value && selectedGame) {
+                goButton.style.background = 'linear-gradient(45deg, #4CAF50, #45a049)';
+                goButton.textContent = `跳转到 ${selectedGame.name}`;
+            } else {
+                goButton.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
+                goButton.textContent = '跳转到Mod页面';
+            }
+        });
+
+        // 添加粒子效果背景
+        function createParticles() {
+            const particleCount = 50;
+            const particles = [];
+
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.cssText = `
+                    position: fixed;
+                    width: 4px;
+                    height: 4px;
+                    background: rgba(255,255,255,0.3);
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: -1;
+                `;
+
+                particle.style.left = Math.random() * window.innerWidth + 'px';
+                particle.style.top = Math.random() * window.innerHeight + 'px';
+
+                document.body.appendChild(particle);
+                particles.push({
+                    element: particle,
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight,
+                    vx: (Math.random() - 0.5) * 2,
+                    vy: (Math.random() - 0.5) * 2
+                });
+            }
+
+            function animateParticles() {
+                particles.forEach(particle => {
+                    particle.x += particle.vx;
+                    particle.y += particle.vy;
+
+                    if (particle.x < 0 || particle.x > window.innerWidth) particle.vx *= -1;
+                    if (particle.y < 0 || particle.y > window.innerHeight) particle.vy *= -1;
+
+                    particle.element.style.left = particle.x + 'px';
+                    particle.element.style.top = particle.y + 'px';
+                });
+
+                requestAnimationFrame(animateParticles);
+            }
+
+            animateParticles();
+        }
+
+
+
+
+
+        // 页面加载完成后初始化
+        window.addEventListener('load', async function () {
+            createParticles();
+
+            // 绑定GitHub图标事件
+            const githubIcon = document.getElementById('github-icon');
+            githubIcon.addEventListener('click', function() {
+                // 打开GitHub仓库页面
+                window.open('https://github.com/llxo/nexusmodjumper', '_blank');
+                showNotification('已在新标签页中打开GitHub仓库 🐱', 'info');
+            });
+
+            // 绑定清除历史图标事件
+            const clearHistoryIcon = document.getElementById('clear-history-icon');
+            clearHistoryIcon.addEventListener('click', function() {
+                // 直接清除历史记录，无需二次确认
+                if (clearRecentGames()) {
+                    showNotification('历史记录已清除 🗑️', 'success');
+                    
+                    // 如果当前正在显示搜索结果，隐藏它们
+                    const searchResults = document.getElementById('search-results');
+                    if (searchResults.style.display === 'block') {
+                        searchResults.style.display = 'none';
+                    }
+                    
+                    // 清空搜索框
+                    const gameSearchInput = document.getElementById('game-search');
+                    gameSearchInput.value = '';
+                    selectedGame = null;
+                    
+                    // 重置按钮状态
+                    goButton.style.background = 'linear-gradient(45deg, #667eea, #764ba2)';
+                    goButton.textContent = '跳转到Mod页面';
+                } else {
+                    showNotification('清除历史记录失败', 'error');
+                }
+            });
+
+
+
+
+
+            // 绑定刷新图标事件
+            const refreshIcon = document.getElementById('refresh-icon');
+
+            refreshIcon.addEventListener('click', async function () {
+                // 如果正在刷新或禁用状态，不处理点击
+                if (refreshIcon.classList.contains('refreshing') || refreshIcon.classList.contains('disabled')) {
+                    return;
+                }
+
+                const loadingIndicator = document.getElementById('loading-indicator');
+
+                // 添加刷新动画和禁用状态
+                refreshIcon.classList.add('refreshing', 'disabled');
+
+                // 清除缓存并重新显示加载状态
+                clearGamesCache();
+                gameSearchInput.disabled = true;
+                gameSearchInput.placeholder = '正在强制刷新...';
+                loadingIndicator.style.display = 'block';
+
+                // 强制重新获取游戏列表（跳过缓存）
+                await fetchGamesFromAPI(true);
+
+            });
+
+            await fetchGamesFromAPI();
+        });
+    </script>
+</body>
+
+</html>
