@@ -539,6 +539,14 @@
               "description": "歌不全",
               "icon": "https://www.google.com/s2/favicons?sz=128&domain=dab.yeet.su",
               "enabled": true
+            },
+            {
+              "id": "site_1761199650359_pcyvnae1j",
+              "title": "玖洛测速面板",
+              "href": "https://speed.xingchencloud.top/",
+              "description": "网络面板(NetworkPanel)是一个在线流量消耗器，可以测试您的网速，监测您的网络环境，提供丰富测试节点，并且长期维护更新",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761199632370.png",
+              "enabled": true
             }
           ],
           "enabled": true
