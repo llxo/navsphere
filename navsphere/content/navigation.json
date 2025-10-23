@@ -210,6 +210,14 @@
               "description": "Download crack app for mac with full speed just one step...",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023568338.png",
               "enabled": true
+            },
+            {
+              "id": "site_1761023598767_b3ticgmiu",
+              "title": "TNT",
+              "href": "https://appstorrent.ru/",
+              "description": "访问 appstorrent.ru",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023584454.png",
+              "enabled": true
             }
           ]
         },
@@ -478,14 +486,6 @@
           "description": "",
           "enabled": true,
           "items": [
-            {
-              "id": "site_1761023598767_b3ticgmiu",
-              "title": "TNT",
-              "href": "https://appstorrent.ru/",
-              "description": "访问 appstorrent.ru",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023584454.png",
-              "enabled": true
-            },
             {
               "id": "site_1761023641142_j45n3qkzh",
               "title": "Mac Torrents",
