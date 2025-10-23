@@ -283,6 +283,14 @@
               "description": "免费单机游戏电影动漫软件分享",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1756974127489.png",
               "enabled": true
+            },
+            {
+              "id": "site_1761199932022_9fgt43v8f",
+              "title": "Nexus Mods 跳转器",
+              "href": "https://nmod.netlify.app/",
+              "description": "我不会告诉你这是我自己做的",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761199890873.png",
+              "enabled": true
             }
           ]
         },
