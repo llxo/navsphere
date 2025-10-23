@@ -218,6 +218,14 @@
               "description": "访问 appstorrent.ru",
               "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023584454.png",
               "enabled": true
+            },
+            {
+              "id": "site_1761023641142_j45n3qkzh",
+              "title": "Mac Torrents",
+              "href": "https://www.torrentmac.net/",
+              "description": "Mac Torrents - Torrents for Mac. Free Apps, Games &amp; Plugins. Apple Final Cut Pro &amp; Logic Pro X, Adobe Photoshop, Microsoft Office, Pixel Film Studios, Torrent Mac",
+              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023631025.png",
+              "enabled": true
             }
           ]
         },
@@ -486,14 +494,6 @@
           "description": "",
           "enabled": true,
           "items": [
-            {
-              "id": "site_1761023641142_j45n3qkzh",
-              "title": "Mac Torrents",
-              "href": "https://www.torrentmac.net/",
-              "description": "Mac Torrents - Torrents for Mac. Free Apps, Games &amp; Plugins. Apple Final Cut Pro &amp; Logic Pro X, Adobe Photoshop, Microsoft Office, Pixel Film Studios, Torrent Mac",
-              "icon": "https://raw.githubusercontent.com/llxo/navsphere/main/public/assets/favicon_1761023631025.png",
-              "enabled": true
-            },
             {
               "id": "site_1761023794609_r5drvgyb7",
               "title": "Zhiniw",
